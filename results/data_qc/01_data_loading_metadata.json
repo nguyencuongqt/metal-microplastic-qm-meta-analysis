@@ -2,7 +2,7 @@
   "inspection": {
     "shape": [
       316,
-      23
+      20
     ],
     "columns": [
       "Row_ID",
@@ -24,10 +24,7 @@
       "pH",
       "rpm",
       "Adc",
-      "Qm (ug/g)",
-      "Aged condition",
-      "Solution- added agent",
-      "Note"
+      "Qm (ug/g)"
     ],
     "dtypes": {
       "Row_ID": "str",
@@ -49,10 +46,7 @@
       "pH": "float64",
       "rpm": "float64",
       "Adc": "str",
-      "Qm (ug/g)": "float64",
-      "Aged condition": "str",
-      "Solution- added agent": "str",
-      "Note": "str"
+      "Qm (ug/g)": "float64"
     },
     "missing_counts": {
       "Row_ID": 0,
@@ -74,10 +68,7 @@
       "pH": 138,
       "rpm": 65,
       "Adc": 0,
-      "Qm (ug/g)": 0,
-      "Aged condition": 172,
-      "Solution- added agent": 233,
-      "Note": 159
+      "Qm (ug/g)": 0
     },
     "missing_percentages": {
       "Row_ID": 0.0,
@@ -99,10 +90,7 @@
       "pH": 43.67088607594937,
       "rpm": 20.569620253164558,
       "Adc": 0.0,
-      "Qm (ug/g)": 0.0,
-      "Aged condition": 54.43037974683544,
-      "Solution- added agent": 73.73417721518987,
-      "Note": 50.31645569620253
+      "Qm (ug/g)": 0.0
     },
     "numeric_columns": [
       "Publication_year",
@@ -126,10 +114,7 @@
       "ReT",
       "SA (m2/g)",
       "Metal",
-      "Adc",
-      "Aged condition",
-      "Solution- added agent",
-      "Note"
+      "Adc"
     ]
   },
   "variable_mapping": {
@@ -139,7 +124,7 @@
     "pH": "pH",
     "Temperature": "Temp",
     "SA": "SA (m2/g)",
-    "Aging": "Aged condition",
+    "Aging": "AgS",
     "Study": "Source_ID",
     "DOI": "DOI",
     "Year": "Publication_year"
@@ -156,9 +141,9 @@
   },
   "quality_report": {
     "total_rows": 316,
-    "total_columns": 23,
-    "complete_rows": 0,
-    "completeness_rate": 0.0,
+    "total_columns": 20,
+    "complete_rows": 41,
+    "completeness_rate": 12.974683544303797,
     "variables_found": 10,
     "variables_missing": 0,
     "core_required_columns": [

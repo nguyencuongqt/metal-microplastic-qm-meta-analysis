@@ -3,25 +3,25 @@
   "final_rows": 316,
   "rows_removed": 0,
   "removal_rate": 0.0,
-  "initial_columns": 23,
-  "final_columns": 34,
-  "columns_removed": 5,
+  "initial_columns": 20,
+  "final_columns": 32,
+  "columns_removed": 4,
   "columns_added": 16,
   "missing_data": {
-    "initial_missing_cells": 834,
-    "initial_missing_pct": 11.47495872317006,
-    "final_missing_cells": 734,
-    "final_missing_pct": 6.831720029784065,
+    "initial_missing_cells": 429,
+    "initial_missing_pct": 6.787974683544304,
+    "final_missing_cells": 329,
+    "final_missing_pct": 3.2535601265822787,
     "reduction": 100
   },
   "data_types": {
     "initial": {
-      "str": 16,
+      "str": 13,
       "float64": 5,
       "int64": 2
     },
     "final": {
-      "str": 15,
+      "str": 13,
       "float64": 7,
       "int64": 6,
       "int32": 3,
@@ -55,8 +55,8 @@
       "columns": [
         "ALL_COLUMNS"
       ],
-      "complete_rows": 1,
-      "completeness_pct": 0.31645569620253167
+      "complete_rows": 54,
+      "completeness_pct": 17.088607594936708
     }
   }
 }

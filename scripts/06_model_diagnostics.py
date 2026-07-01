@@ -1145,7 +1145,7 @@ def stratified_posterior_predictive_checks(trace, df: pd.DataFrame, config: Proj
         # Primary model predictors: Metal, ReT, AgS, Temp (continuous)
         # Stratifying by categorical predictors to assess fit heterogeneity
         strata_candidates = []
-        for col in ['Metal', 'ReT', 'AgS', 'Aged condition']:  # AgS variants for compatibility
+        for col in ['Metal', 'ReT', 'AgS']:
             if col in df.columns:
                 n_unique = df[col].nunique()
                 if n_unique >= 2:  # At least 2 groups

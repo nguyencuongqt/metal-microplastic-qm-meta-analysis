@@ -12,7 +12,7 @@
       "passed": true
     },
     "ess_tail": {
-      "min": 3255.2660363856676,
+      "min": 3255.2660363856508,
       "threshold": 400,
       "passed": true
     },
@@ -25,12 +25,12 @@
       "passed": true
     },
     "bfmi": {
-      "min": 0.8976804548151683,
+      "min": 0.8976804548202462,
       "values": [
-        0.8976804548151683,
-        0.9077272126527801,
-        0.9107915229224054,
-        0.91547962816833
+        0.8976804548202462,
+        0.9077272126574971,
+        0.9107915229305478,
+        0.9154796281752378
       ],
       "threshold": 0.3,
       "passed": true
@@ -42,7 +42,7 @@
       "max_treedepth": 10,
       "passed": true
     },
-    "energy_plot": "g:\\My Drive\\Qm_metal_MP adsorption\\figures\\Diagnostics_03_energy_plot.png",
+    "energy_plot": "G:\\My Drive\\Qm_metal_MP adsorption\\figures\\Diagnostics_03_energy_plot.png",
     "psis_loo": {
       "elpd_loo": -319.4197655044351,
       "p_loo": 62.323498419844384,
@@ -57,7 +57,7 @@
       },
       "passed": true,
       "ll_var_name": "likelihood",
-      "plot_path": "g:\\My Drive\\Qm_metal_MP adsorption\\figures\\Diagnostics_04_pareto_k_fallback.png",
+      "plot_path": "G:\\My Drive\\Qm_metal_MP adsorption\\figures\\Diagnostics_04_pareto_k_fallback.png",
       "plot_method": "matplotlib_fallback"
     },
     "overall_advanced_diagnostics": true
@@ -110,47 +110,47 @@
         "index": 3,
         "pareto_k": 0.8241357253210846,
         "severity": "bad",
-        "study_id": "(Li et al., 2019)",
+        "study_id": "QMS014",
         "row_mapping": "provisional"
       },
       {
         "index": 5,
         "pareto_k": 0.7003090138485706,
         "severity": "bad",
-        "study_id": "(Yang et al., 2019)",
+        "study_id": "QMS045",
         "row_mapping": "provisional"
       },
       {
         "index": 64,
         "pareto_k": 0.7022375583660266,
         "severity": "bad",
-        "study_id": "(Wang_wang 2020)",
+        "study_id": "QMS043",
         "row_mapping": "provisional"
       },
       {
         "index": 119,
         "pareto_k": 0.7829811841312545,
         "severity": "bad",
-        "study_id": "(Li_Wang 2022)",
+        "study_id": "QMS017",
         "row_mapping": "provisional"
       },
       {
         "index": 202,
         "pareto_k": 0.9067069046344792,
         "severity": "bad",
-        "study_id": "(Sathyamoorthy et al., 2022)",
+        "study_id": "QMS032",
         "row_mapping": "provisional"
       },
       {
         "index": 297,
         "pareto_k": 0.7984196279327463,
         "severity": "bad",
-        "study_id": "(Saravanakumar et al., 2024)",
+        "study_id": "QMS031",
         "row_mapping": "provisional"
       }
     ],
     "study_aggregation": {
-      "(Li et al., 2019)": {
+      "QMS014": {
         "bad_count": 1,
         "very_bad_count": 0,
         "mean_k": 0.13735595422018076,
@@ -158,7 +158,7 @@
         "n_obs_in_study": 4,
         "mapping_status": "provisional"
       },
-      "(Yang et al., 2019)": {
+      "QMS045": {
         "bad_count": 1,
         "very_bad_count": 0,
         "mean_k": 0.11671816897476177,
@@ -166,7 +166,7 @@
         "n_obs_in_study": 7,
         "mapping_status": "provisional"
       },
-      "(Wang_wang 2020)": {
+      "QMS043": {
         "bad_count": 1,
         "very_bad_count": 0,
         "mean_k": 0.11703959306100443,
@@ -174,7 +174,7 @@
         "n_obs_in_study": 2,
         "mapping_status": "provisional"
       },
-      "(Li_Wang 2022)": {
+      "QMS017": {
         "bad_count": 1,
         "very_bad_count": 0,
         "mean_k": 0.13049686402187574,
@@ -182,7 +182,7 @@
         "n_obs_in_study": 3,
         "mapping_status": "provisional"
       },
-      "(Sathyamoorthy et al., 2022)": {
+      "QMS032": {
         "bad_count": 1,
         "very_bad_count": 0,
         "mean_k": 0.15111781743907987,
@@ -190,7 +190,7 @@
         "n_obs_in_study": 1,
         "mapping_status": "provisional"
       },
-      "(Saravanakumar et al., 2024)": {
+      "QMS031": {
         "bad_count": 1,
         "very_bad_count": 0,
         "mean_k": 0.13306993798879105,
@@ -275,19 +275,6 @@
           }
         },
         "n_sufficient_strata": 2
-      },
-      "Aged condition": {
-        "metrics": {
-          "Lab: UV": {
-            "n": 35,
-            "mae": 0.26640572887048913,
-            "rmse": 0.34128103418630323,
-            "r2": 0.945024498120243,
-            "residual_mean": -0.06291178567869654,
-            "residual_std": 0.3354323352302077
-          }
-        },
-        "n_sufficient_strata": 1
       },
       "heteroskedasticity": {
         "detected": false,

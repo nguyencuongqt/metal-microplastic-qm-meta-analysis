@@ -27,6 +27,7 @@ REFS_PATH = ROOT / "manuscript" / "references" / "QM_50_SOURCES.csv"
 ZOTERO_EXPORT = ROOT / "tmp" / "zotero_qm_extracted_sources_metadata.csv"
 AUDIT_PATH = ROOT / "results" / "data_qc" / "qm_data_standardization_audit.csv"
 LEGACY_NOTE_AUDIT_PATH = ROOT / "results" / "data_qc" / "qm_data_legacy_unnamed14_notes.csv"
+EXCLUDED_METADATA_COLUMNS = ["Aged condition", "Solution- added agent", "Note"]
 
 
 def normalize_label(value: object) -> str:
@@ -142,6 +143,7 @@ def check_zotero_export(refs: pd.DataFrame, path: Path) -> dict[str, object]:
 def standardize_dataframe(raw: pd.DataFrame, refs: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
     df = raw.copy()
     df = df.dropna(axis=1, how="all")
+    df = df.drop(columns=[col for col in EXCLUDED_METADATA_COLUMNS if col in df.columns])
 
     if "Author-year" not in df.columns:
         raise ValueError("Raw Qm workbook must contain an 'Author-year' column.")
