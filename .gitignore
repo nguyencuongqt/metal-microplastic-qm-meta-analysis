@@ -1,0 +1,138 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.local_env/
+qm_metal_MP_env/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Data (large files)
+# Uncomment if data files are large
+# data_raw/*.xlsx
+# data_raw/*.csv
+data_raw/*draft*.xlsx
+
+# Temporary files
+*.tmp
+*.bak
+*.log
+*.temp
+~$*
+~WRL*.tmp
+tmp/
+output/
+logs/
+*.docx
+*.tif
+*.tiff
+First info.docx
+manuscript_polishing_review_SKILL.md
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Model artifacts (large files)
+models/*.pkl
+models/*.h5
+models/*.joblib
+models/*.nc
+models/*_trace.json
+
+# Generated caches and local build products
+results/sensitivity/cache/
+results/revision_round2/
+results/08_*.json
+results/08_*.csv
+results/data_qc/01b_*
+results/data_qc/03b_metal_aging_support_summary.csv
+results/environmental/08_emvp_release_fraction_summary.json
+results/environmental/08_qm_top20_identifiers.csv
+results/environmental/08_qm_units_log_verification.json
+results/sensitivity/07_sensitivity_results.json
+scripts/**/__pycache__/
+__pycache__/
+
+# Manuscript working files not required for code/data review
+manuscript/submission_package/
+manuscript/legacy_drafts/
+manuscript/generated_materials/
+manuscript/manuscript_blueprint.yaml
+manuscript/generated_materials/figures/**/*.tif
+manuscript/generated_materials/figures/**/*.tiff
+manuscript/references/INTRODUCTION_CITATION_SUGGESTIONS.md
+
+# Internal development reports; public-facing docs are kept at docs/*.md and
+# docs/reports/policy/data_policy.md.
+docs/reports/implementation/
+docs/reports/publication/
+docs/reports/review/
+docs/project_log.md
+docs/reports/policy/DATA_POLICY_COMPLIANCE_CHECKLIST.md
+docs/reports/policy/POLICY_IMPLEMENTATION_REPORT.md
+
+# Local agent and auxiliary scripts not needed in the public package
+AGENTS.md
+scripts/06_model_diagnostics_backup.py
+scripts/12_build_word_manuscript.py
+scripts/audit_proposal_feasibility.py
+scripts/revision_round2/
+scripts/01b_data diagnostic.py
+scripts/10_conservative_manuscript_extensions.py
+scripts/11_results_presentation_upgrade.py
+scripts/Figure3_Rwater.py
+scripts/create_main_results_figures.py
+
+# Non-final or duplicate figure exports
+figures/Diagnostics_*.png
+figures/EDA_*.png
+figures/Environmental_*.png
+figures/Sensitivity_*.png
+figures/Figure_*.txt
+figures/PDF/
+
+# Results (if regenerable)
+# results/*.csv
+# figures/*.png
+
+# Keep directory structure
+!.gitkeep
+manuscript/.gitkeep
+tests/.gitkeep

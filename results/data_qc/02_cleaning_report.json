@@ -1,0 +1,61 @@
+{
+  "initial_rows": 316,
+  "final_rows": 316,
+  "rows_removed": 0,
+  "removal_rate": 0.0,
+  "initial_columns": 15,
+  "final_columns": 25,
+  "columns_removed": 6,
+  "columns_added": 16,
+  "missing_data": {
+    "initial_missing_cells": 834,
+    "initial_missing_pct": 17.594936708860757,
+    "final_missing_cells": 734,
+    "final_missing_pct": 9.291139240506329,
+    "reduction": 100
+  },
+  "data_types": {
+    "initial": {
+      "str": 10,
+      "float64": 5
+    },
+    "final": {
+      "str": 8,
+      "float64": 7,
+      "int64": 4,
+      "int32": 3,
+      "int8": 1,
+      "bool": 1,
+      "category": 1
+    }
+  },
+  "completeness_summaries": {
+    "core_completeness": {
+      "columns": [
+        "Qm",
+        "Metal",
+        "ReT"
+      ],
+      "complete_rows": 316,
+      "completeness_pct": 100.0
+    },
+    "covariate_model_completeness": {
+      "columns": [
+        "log_Qm",
+        "Temp",
+        "pH",
+        "AIC",
+        "rpm"
+      ],
+      "complete_rows": 178,
+      "completeness_pct": 56.32911392405063
+    },
+    "full_variable_completeness": {
+      "columns": [
+        "ALL_COLUMNS"
+      ],
+      "complete_rows": 1,
+      "completeness_pct": 0.31645569620253167
+    }
+  }
+}

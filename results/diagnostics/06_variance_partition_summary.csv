@@ -1,0 +1,4 @@
+quantity,estimate,lower,upper,note
+sigma_study,1.8215390637764708,1.4459846330349488,2.240847422537909,Posterior summary from primary hierarchical model.
+sigma_residual,0.5893516459332047,0.5401120917270154,0.6432201688709406,Posterior summary from primary hierarchical model.
+approx_icc_study_share,0.905237885211108,0.8348113203408695,0.9450941879508897,"Approximate model-based study-level variance share from marginal posterior summaries; descriptive, not causal partitioning."

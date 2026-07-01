@@ -1,0 +1,371 @@
+# ============================================================================
+# CONFIGURATION FILE FOR QM META-ANALYSIS PROJECT
+# ============================================================================
+# This file contains all parameters, thresholds, and settings used throughout
+# the analysis pipeline to ensure reproducibility and easy parameter tuning.
+
+# ----------------------------------------------------------------------------
+# GENERAL SETTINGS
+# ----------------------------------------------------------------------------
+random_seed: 42
+project_name: "Qm_Metal_MP_MetaAnalysis"
+version: "1.0.0"
+author: "Manuscript authors"
+date: "2026-03-02"
+
+# ----------------------------------------------------------------------------
+# FILE PATHS (relative to project root)
+# ----------------------------------------------------------------------------
+paths:
+  raw_data: "data_raw/Qm data.xlsx"
+  processed_data: "data_processed/"
+  models: "models/"
+  results: "results/"
+  figures: "figures/"
+  logs: "logs/"
+  manuscript: "manuscript/"
+
+# ----------------------------------------------------------------------------
+# DATA PROCESSING PARAMETERS
+# ----------------------------------------------------------------------------
+data_processing:
+  # Unit harmonization
+  qm_units:
+    target: "ug/g"  # Unit of cleaned data after script 02 (all harmonized to ug/g from raw data)
+                    # Note: Script 08 converts to mg/g internally for EMVP calculations
+    conversion_factors:
+      "µg/g": null    # Unicode mu - already target unit
+      "μg/g": null    # Greek mu variant - already target unit
+      "ug/g": null    # ASCII alias - already target unit
+      "mg/kg": 1.0    # mg/kg = ug/g (using density ~1)
+      "g/kg": 1000.0  # g/kg x 1000 = ug/g
+      "mmol/g": null  # Requires molecular weight conversion
+  
+  # Outlier detection
+  outlier_detection:
+    method: "IQR"  # Options: "IQR", "zscore", "isolation_forest"
+    iqr_multiplier: 3.0
+    zscore_threshold: 3.5
+    flag_only: true  # If true, flag but don't remove outliers
+  
+  # Log transformation
+  log_transform:
+    apply: true
+    base: "natural"  # "natural" (ln) or 10
+    offset: 0.001  # Add small constant to avoid log(0)
+  
+  # Missing data handling
+  missing_data:
+    max_missing_fraction: 0.3  # Drop variables with >30% missing
+    imputation_method: "none"  # Options: "none", "mean", "median", "knn"
+  
+  # Quality flags
+  quality_flags:
+    min_replicates: 2
+    require_equilibrium_time: false
+    min_data_points_per_study: 3
+  
+  # Descriptor enrichment settings
+  enrichment_min_coverage: 50  # Minimum % enrichment coverage required (0-100)
+  unmatched_metals_policy: "keep_with_na"  # Options: "error", "drop_rows", "keep_with_na"
+    # "error": Raise error if unmatched metals found (fail-fast)
+    # "drop_rows": Remove rows with unmatched metals (strict enrichment)
+    # "keep_with_na": Keep rows with NaN descriptors, add metal_descriptor_missing indicator (lenient)
+  
+  # Species-specific handling for oxyanions and non-cation species
+  species_handling:
+    require_speciation:
+      - "Cr_VI"      # Chromium(VI) oxyanion - different coordination chemistry
+      - "As_III"     # Arsenic(III) - non-cation speciation
+    rationale: "CrO4^2- and As(OH)3 have fundamentally different hydration and coordination than simple cations. Descriptors designed for +2/+3 cations are not applicable."
+
+# ----------------------------------------------------------------------------
+# METAL PHYSICOCHEMICAL PROPERTIES
+# ----------------------------------------------------------------------------
+# Literature values for descriptor enrichment
+metal_descriptors:
+  Cu:
+    hydration_energy: -2100  # kJ/mol
+    ionic_radius: 0.73  # Angstrom (Cu2+)
+    valence: 2
+    electronegativity: 1.90
+    hardness: "borderline"
+  Pb:
+    hydration_energy: -1481
+    ionic_radius: 1.19  # Angstrom (Pb2+)
+    valence: 2
+    electronegativity: 2.33
+    hardness: "borderline"
+  Cd:
+    hydration_energy: -1807
+    ionic_radius: 0.95  # Angstrom (Cd2+)
+    valence: 2
+    electronegativity: 1.69
+    hardness: "soft"
+  Zn:
+    hydration_energy: -2046
+    ionic_radius: 0.74  # Angstrom (Zn2+)
+    valence: 2
+    electronegativity: 1.65
+    hardness: "borderline"
+  Cr:
+    hydration_energy: -1590  # Cr(III)
+    ionic_radius: 0.62  # Angstrom (Cr3+)
+    valence: 3
+    electronegativity: 1.66
+    hardness: "hard"
+  Ni:
+    hydration_energy: -2105
+    ionic_radius: 0.69  # Angstrom (Ni2+)
+    valence: 2
+    electronegativity: 1.91
+    hardness: "borderline"
+  As:
+    hydration_energy: -1450  # As(III)
+    ionic_radius: 0.58  # Angstrom (As3+)
+    valence: 3
+    electronegativity: 2.18
+    hardness: "hard"
+  Hg:
+    hydration_energy: -1824
+    ionic_radius: 1.02  # Angstrom (Hg2+)
+    valence: 2
+    electronegativity: 2.00
+    hardness: "soft"
+  Mn:
+    hydration_energy: -1841  # kJ/mol (Mn2+)
+    ionic_radius: 0.83  # Angstrom (Mn2+, high spin)
+    valence: 2
+    electronegativity: 1.55
+    hardness: "hard"  # Irving-Williams series
+
+# ----------------------------------------------------------------------------
+# STATISTICAL MODELING
+# ----------------------------------------------------------------------------
+modeling:
+  framework: "pymc"  # Options: "pymc" (Bayesian), "statsmodels" (frequentist)
+  
+  # Bayesian settings (PyMC)
+  bayesian:
+    chains: 4
+    draws: 2000
+    tune: 1000
+    target_accept: 0.95
+    cores: 4
+    return_inferencedata: true
+    
+    # Priors
+    priors:
+      intercept:
+        distribution: "Normal"
+        mu: 0
+        sigma: 10
+      fixed_effects:
+        distribution: "Normal"
+        mu: 0
+        sigma: 5
+      random_effects_sd:
+        distribution: "HalfNormal"
+        sigma: 2
+      residual_sd:
+        distribution: "HalfNormal"
+        sigma: 1
+  
+  # Frequentist settings (statsmodels)
+  frequentist:
+    method: "REML"  # Restricted Maximum Likelihood
+    
+  # Model formulas
+  formulas:
+    primary: "log_Qm ~ C(Metal) + C(Polymer) + C(Aging) + pH + SA + Temp"
+    alternative: "log_Qm ~ Hydration_Energy + Ionic_Radius + Valence + SA + C(Aging) + pH"
+    random_effect: "(1 | Study_ID)"
+
+# ----------------------------------------------------------------------------
+# MODEL DIAGNOSTICS AND VALIDATION
+# ----------------------------------------------------------------------------
+diagnostics:
+  # Convergence diagnostics
+  convergence:
+    rhat_threshold: 1.01
+    ess_bulk_min: 400
+    ess_tail_min: 400
+  
+  # Residual diagnostics
+  residuals:
+    normality_test: "shapiro"  # Options: "shapiro", "anderson", "ks"
+    homoscedasticity_test: "breusch_pagan"
+  
+  # Multicollinearity
+  multicollinearity:
+    vif_threshold: 10.0
+  
+  # Influence diagnostics
+  influence:
+    cooks_d_threshold: 0.5
+    dffits_threshold: 2.0
+  
+  # Posterior predictive checks (Bayesian)
+  posterior_predictive:
+    n_samples: 1000
+    plot_checks: ["density", "cumulative", "scatter"]
+
+# ----------------------------------------------------------------------------
+# SENSITIVITY ANALYSIS
+# ----------------------------------------------------------------------------
+sensitivity:
+  # Run mode: "quick" (dev), "standard" (default), "publication" (robust)
+  # quick: 2 chains, 800 draws/tune, target_accept=0.90 (fast for development)
+  # standard: 4 chains, 1500 draws/tune, target_accept=0.92 (balanced, recommended)
+  # publication: 4 chains, 2000 draws/tune, target_accept=0.95 (strict convergence)
+  run_mode: "standard"
+  
+  # Leave-one-study-out (LOSO)
+  loso:
+    enabled: true
+    metric: "mean_absolute_error"
+  
+  # Parameter perturbation
+  perturbation:
+    enabled: true
+    variables: ["pH", "SA", "Temp"]
+    perturbation_fraction: [0.9, 1.1]  # +/-10%
+  
+  # Prior sensitivity (Bayesian)
+  prior_sensitivity:
+    enabled: true
+    scales: [0.5, 1.0, 2.0]  # Test with tighter/broader priors
+  
+  # Bootstrap resampling
+  bootstrap:
+    enabled: true
+    n_iterations: 1000
+    max_iterations: 30  # Runtime cap: 10 (quick), 30 (standard), 100 (publication)
+    sample_fraction: 0.8
+
+# ----------------------------------------------------------------------------
+# ENVIRONMENTAL RELEVANCE MODULE
+# ----------------------------------------------------------------------------
+environmental:
+  # Environmental Metal Vector Potential (EMVP)
+  emvp:
+    formula: "Qm x C_MP"  # ug metal per L
+    
+    # Microplastic concentration scenarios (mg/L)
+    mp_concentrations:
+      pristine: 0.0001
+      low: 0.001
+      moderate: 0.01
+      high: 0.1
+      extreme: 1.0
+    
+    # Background dissolved metal concentrations (ug/L)
+    # For comparison with EMVP
+    background_metals:
+      Cu: 10  # Typical surface water
+      Pb: 2
+      Cd: 0.5
+      Zn: 50
+      Cr: 5
+      Ni: 10
+      As: 5
+      Hg: 0.1
+      Mn: 20  # Typical surface water (WHO: 50-500 ug/L range, using conservative value)
+    
+    # Monte Carlo uncertainty propagation
+    monte_carlo:
+      n_simulations: 10000
+      uncertainty_sources: ["Qm", "C_MP"]
+      Qm_cv: 0.3  # Coefficient of variation (30%)
+      C_MP_cv: 0.5  # Coefficient of variation (50%)
+    
+    # Interpretation thresholds for EMVP/background ratios
+    ratio_minor_threshold: 0.1          # Below: "likely_minor"
+    ratio_major_threshold: 1.0          # Above: "dominant"; Between: "potentially_relevant"
+    
+    # Sensitivity analysis parameters
+    sensitivity_metals: ["Pb", "Cd", "As"]  # Focus metals for grid analysis
+    sensitivity_scenario: "moderate"         # Scenario to analyze
+  
+  # Scenario analysis
+  scenarios:
+    aging_scenarios: ["pristine", "UV_aged", "weathered"]
+    polymer_scenarios: ["PE", "PP", "PS", "PET", "PVC"]
+    metal_priority: ["Pb", "Cd", "Hg", "As", "Cr"]
+
+# ----------------------------------------------------------------------------
+# FIGURE GENERATION
+# ----------------------------------------------------------------------------
+figures:
+  # Global figure settings
+  global:
+    dpi: 300
+    format: ["png", "pdf", "svg"]
+    style: "seaborn-v0_8-paper"
+    font_family: "Arial"
+    font_size: 10
+    figure_size: [8, 6]  # inches
+    
+  # Individual figure specifications
+  figure1_forest_plot:
+    title: "Effect Sizes for Metal and Polymer Types"
+    file_prefix: "Fig1_forest_plot"
+    show_heterogeneity: true
+    confidence_level: 0.95
+    
+  figure2_heatmap:
+    title: "Polymer x Metal Interaction Heatmap"
+    file_prefix: "Fig2_polymer_metal_heatmap"
+    colormap: "RdYlBu_r"
+    annotate_values: true
+    
+  figure3_partial_dependence:
+    title: "Marginal Effects of Environmental Factors"
+    file_prefix: "Fig3_partial_dependence"
+    variables: ["pH", "SA", "Temp"]
+    grid_layout: [1, 3]
+    
+  figure4_aging_effect:
+    title: "Aging Enhancement Ratio"
+    file_prefix: "Fig4_aging_enhancement"
+    comparison: "aged_vs_pristine"
+    
+  figure5_emvp:
+    title: "Environmental Metal Vector Potential"
+    file_prefix: "Fig5_EMVP_scenarios"
+    reference_line: "background_concentration"
+    
+  figure6_sensitivity:
+    title: "Sensitivity Analysis"
+    file_prefix: "Fig6_sensitivity_tornado"
+    plot_type: "tornado"
+
+# ----------------------------------------------------------------------------
+# LOGGING AND OUTPUT
+# ----------------------------------------------------------------------------
+logging:
+  level: "INFO"  # Options: "DEBUG", "INFO", "WARNING", "ERROR"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  log_to_file: true
+  log_to_console: true
+  
+output:
+  save_intermediate: true
+  timestamp_outputs: true
+  compress_large_files: false
+  decimal_places: 4
+
+# ----------------------------------------------------------------------------
+# MANUSCRIPT OUTPUT
+# ----------------------------------------------------------------------------
+manuscript:
+  target_journal: "Environmental Science & Technology"
+  word_limit: 6000
+  figure_limit: 6
+  supporting_info: true
+  
+  export_formats:
+    main_text: "docx"
+    tables: "xlsx"
+    figures: ["png", "pdf"]
+    supporting: "pdf"

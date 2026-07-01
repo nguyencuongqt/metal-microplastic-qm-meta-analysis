@@ -1,0 +1,298 @@
+{
+  "convergence": {
+    "rhat": {
+      "min": 0.9997368636921721,
+      "max": 1.0029073172967276,
+      "threshold": 1.01,
+      "passed": true
+    },
+    "ess_bulk": {
+      "min": 1822.7546491335252,
+      "threshold": 400,
+      "passed": true
+    },
+    "ess_tail": {
+      "min": 3255.2660363856676,
+      "threshold": 400,
+      "passed": true
+    },
+    "overall_convergence": true
+  },
+  "advanced_diagnostics": {
+    "divergences": {
+      "count": 0,
+      "rate": 0.0,
+      "passed": true
+    },
+    "bfmi": {
+      "min": 0.8976804548151683,
+      "values": [
+        0.8976804548151683,
+        0.9077272126527801,
+        0.9107915229224054,
+        0.91547962816833
+      ],
+      "threshold": 0.3,
+      "passed": true
+    },
+    "tree_depth": {
+      "max": 10,
+      "hitting_max_count": 8,
+      "hitting_max_rate": 0.001,
+      "max_treedepth": 10,
+      "passed": true
+    },
+    "energy_plot": "g:\\My Drive\\Qm_metal_MP adsorption\\figures\\Diagnostics_03_energy_plot.png",
+    "psis_loo": {
+      "elpd_loo": -319.4197655044351,
+      "p_loo": 62.323498419844384,
+      "looic": null,
+      "pareto_k": {
+        "good_count": 287,
+        "ok_count": 23,
+        "bad_count": 6,
+        "very_bad_count": 0,
+        "max": 0.9067069046344792,
+        "mean": 0.2505499286462595
+      },
+      "passed": true,
+      "ll_var_name": "likelihood",
+      "plot_path": "g:\\My Drive\\Qm_metal_MP adsorption\\figures\\Diagnostics_04_pareto_k_fallback.png",
+      "plot_method": "matplotlib_fallback"
+    },
+    "overall_advanced_diagnostics": true
+  },
+  "posterior_predictive": {
+    "mae": 0.3948182339599436,
+    "rmse": 0.5248640032813551,
+    "r2": 0.9432665383725906,
+    "mean_residual": 0.0007348378035254299,
+    "std_residual": 0.5248634888749004,
+    "n_observations": 316,
+    "n_dataframe": 316,
+    "obs_var_name": "likelihood",
+    "diagnotic_type": "IN-SAMPLE CALIBRATION (not external validation)",
+    "note_sample_type": "full data",
+    "coverage_95": 0.9651898734177216,
+    "scientific_note": "These metrics reflect goodness-of-fit to training data used in model fitting. They do NOT assess generalization or out-of-sample performance. See LOSO validation framework for cross-validation structure."
+  },
+  "multicollinearity": {
+    "vif_values": [
+      {
+        "Variable": "Temp",
+        "VIF": 1.0,
+        "High_VIF": false
+      }
+    ],
+    "n_high_vif": 0,
+    "threshold": 10.0
+  },
+  "loso_validation": {
+    "n_studies": 50,
+    "method": "leave_one_study_out",
+    "status": "framework_structure_available",
+    "validation_performed": false,
+    "study_size_stats": {
+      "min": 1,
+      "max": 35,
+      "median": 4.0,
+      "mean": 6.32
+    },
+    "note": "(FRAMEWORK ONLY) LOSO validation structure identified but NOT YET EXECUTED. Full implementation requires model refitting for each fold (n_studies=50 refits needed)."
+  },
+  "influence_diagnostics": {
+    "status": "detected",
+    "n_problematic": 6,
+    "n_very_bad": 0,
+    "n_bad": 6,
+    "problematic_obs": [
+      {
+        "index": 3,
+        "pareto_k": 0.8241357253210846,
+        "severity": "bad",
+        "study_id": "(Li et al., 2019)",
+        "row_mapping": "provisional"
+      },
+      {
+        "index": 5,
+        "pareto_k": 0.7003090138485706,
+        "severity": "bad",
+        "study_id": "(Yang et al., 2019)",
+        "row_mapping": "provisional"
+      },
+      {
+        "index": 64,
+        "pareto_k": 0.7022375583660266,
+        "severity": "bad",
+        "study_id": "(Wang_wang 2020)",
+        "row_mapping": "provisional"
+      },
+      {
+        "index": 119,
+        "pareto_k": 0.7829811841312545,
+        "severity": "bad",
+        "study_id": "(Li_Wang 2022)",
+        "row_mapping": "provisional"
+      },
+      {
+        "index": 202,
+        "pareto_k": 0.9067069046344792,
+        "severity": "bad",
+        "study_id": "(Sathyamoorthy et al., 2022)",
+        "row_mapping": "provisional"
+      },
+      {
+        "index": 297,
+        "pareto_k": 0.7984196279327463,
+        "severity": "bad",
+        "study_id": "(Saravanakumar et al., 2024)",
+        "row_mapping": "provisional"
+      }
+    ],
+    "study_aggregation": {
+      "(Li et al., 2019)": {
+        "bad_count": 1,
+        "very_bad_count": 0,
+        "mean_k": 0.13735595422018076,
+        "max_k": 0.8241357253210846,
+        "n_obs_in_study": 4,
+        "mapping_status": "provisional"
+      },
+      "(Yang et al., 2019)": {
+        "bad_count": 1,
+        "very_bad_count": 0,
+        "mean_k": 0.11671816897476177,
+        "max_k": 0.7003090138485706,
+        "n_obs_in_study": 7,
+        "mapping_status": "provisional"
+      },
+      "(Wang_wang 2020)": {
+        "bad_count": 1,
+        "very_bad_count": 0,
+        "mean_k": 0.11703959306100443,
+        "max_k": 0.7022375583660266,
+        "n_obs_in_study": 2,
+        "mapping_status": "provisional"
+      },
+      "(Li_Wang 2022)": {
+        "bad_count": 1,
+        "very_bad_count": 0,
+        "mean_k": 0.13049686402187574,
+        "max_k": 0.7829811841312545,
+        "n_obs_in_study": 3,
+        "mapping_status": "provisional"
+      },
+      "(Sathyamoorthy et al., 2022)": {
+        "bad_count": 1,
+        "very_bad_count": 0,
+        "mean_k": 0.15111781743907987,
+        "max_k": 0.9067069046344792,
+        "n_obs_in_study": 1,
+        "mapping_status": "provisional"
+      },
+      "(Saravanakumar et al., 2024)": {
+        "bad_count": 1,
+        "very_bad_count": 0,
+        "mean_k": 0.13306993798879105,
+        "max_k": 0.7984196279327463,
+        "n_obs_in_study": 1,
+        "mapping_status": "provisional"
+      }
+    },
+    "row_mapping_status": "provisional",
+    "note": "High-influence observations via Pareto-k smoothness diagnostic (study mapping approximate)"
+  },
+  "stratified_ppc": {
+    "status": "completed",
+    "results": {
+      "Metal": {
+        "metrics": {
+          "Cd": {
+            "n": 47,
+            "mae": 0.2534467813333201,
+            "rmse": 0.38198539109928764,
+            "r2": 0.9247305424315804,
+            "residual_mean": -0.0004149502809921506,
+            "residual_std": 0.3819851657192202
+          },
+          "Cu": {
+            "n": 102,
+            "mae": 0.5041727379467021,
+            "rmse": 0.6376587989377203,
+            "r2": 0.9274324546656353,
+            "residual_mean": -0.00024986827227992684,
+            "residual_std": 0.6376587499819496
+          },
+          "Pb": {
+            "n": 83,
+            "mae": 0.32247980966558504,
+            "rmse": 0.40958237953905013,
+            "r2": 0.9592734403760868,
+            "residual_mean": 0.001972344208091627,
+            "residual_std": 0.4095776305991275
+          }
+        },
+        "n_sufficient_strata": 3
+      },
+      "ReT": {
+        "metrics": {
+          "PE": {
+            "n": 45,
+            "mae": 0.5272916418459171,
+            "rmse": 0.6498088445289043,
+            "r2": 0.9372303899749224,
+            "residual_mean": -0.0012112529077857696,
+            "residual_std": 0.649807715631619
+          },
+          "PS": {
+            "n": 135,
+            "mae": 0.3134828753114185,
+            "rmse": 0.41218739417032857,
+            "r2": 0.9597483264042708,
+            "residual_mean": 0.0002757387906310724,
+            "residual_std": 0.4121873019405682
+          }
+        },
+        "n_sufficient_strata": 2
+      },
+      "AgS": {
+        "metrics": {
+          "Virgin": {
+            "n": 151,
+            "mae": 0.42063766871025987,
+            "rmse": 0.5576042382121659,
+            "r2": 0.941073891920566,
+            "residual_mean": 6.92014563506357e-05,
+            "residual_std": 0.5576042339180436
+          },
+          "Aged": {
+            "n": 165,
+            "mae": 0.37118953912783603,
+            "rmse": 0.4930000103012472,
+            "r2": 0.9454251257973952,
+            "residual_mean": 0.001343995915182364,
+            "residual_std": 0.49299817832524473
+          }
+        },
+        "n_sufficient_strata": 2
+      },
+      "Aged condition": {
+        "metrics": {
+          "Lab: UV": {
+            "n": 35,
+            "mae": 0.26640572887048913,
+            "rmse": 0.34128103418630323,
+            "r2": 0.945024498120243,
+            "residual_mean": -0.06291178567869654,
+            "residual_std": 0.3354323352302077
+          }
+        },
+        "n_sufficient_strata": 1
+      },
+      "heteroskedasticity": {
+        "detected": false,
+        "spread_ratio": 1.3964583071697476
+      }
+    }
+  }
+}

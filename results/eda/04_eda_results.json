@@ -1,0 +1,1114 @@
+{
+  "response_distribution": {
+    "n": 316,
+    "mean": 5.612394286548913,
+    "median": 5.7064420553950015,
+    "std": 2.207066462311997,
+    "min": -0.371063681390832,
+    "max": 9.783013399068254,
+    "skewness": -0.2918034227351121,
+    "kurtosis": -0.6708842732920259,
+    "normality_tests": {
+      "shapiro_wilk": {
+        "statistic": 0.9754455089569092,
+        "p_value": 3.137404200970195e-05
+      },
+      "kolmogorov_smirnov": {
+        "statistic": 0.06236356864735071,
+        "p_value": 0.16408265131747046
+      }
+    }
+  },
+  "categorical_factors": {
+    "tests_used_per_factor": {
+      "Metal": "kruskal_wallis",
+      "AgS": "anova",
+      "ReT": "kruskal_wallis",
+      "Adc": "anova",
+      "Aged condition": "kruskal_wallis",
+      "Solution- added agent": "kruskal_wallis",
+      "Hardness": "kruskal_wallis"
+    },
+    "min_group_size": {
+      "Metal": 3,
+      "AgS": 151,
+      "ReT": 1,
+      "Adc": 87,
+      "Aged condition": 1,
+      "Solution- added agent": 1,
+      "Hardness": 3
+    },
+    "primary_metal_factor": "Metal",
+    "supporting_descriptive": {
+      "metal_representations": {
+        "Metal_Species": {
+          "n_categories": 9,
+          "counts": {
+            "Cu_II": 102,
+            "Pb_II": 83,
+            "Cd_II": 47,
+            "Cr_VI": 28,
+            "Hg_II": 23,
+            "Zn_II": 12,
+            "Ni_II": 10,
+            "As_III": 8,
+            "Mn_II": 3
+          },
+          "proportions": {
+            "Cu_II": 0.3227848101265823,
+            "Pb_II": 0.2626582278481013,
+            "Cd_II": 0.14873417721518986,
+            "Cr_VI": 0.08860759493670886,
+            "Hg_II": 0.07278481012658228,
+            "Zn_II": 0.0379746835443038,
+            "Ni_II": 0.03164556962025317,
+            "As_III": 0.02531645569620253,
+            "Mn_II": 0.00949367088607595
+          },
+          "summary_type": "descriptive_only"
+        },
+        "Metal_raw": {
+          "n_categories": 9,
+          "counts": {
+            "Cu (II)": 102,
+            "Pb (II)": 83,
+            "Cd (II)": 47,
+            "Cr (VI)": 28,
+            "Hg (II)": 23,
+            "Zn (II)": 12,
+            "Ni (II)": 10,
+            "As (III)": 8,
+            "Mn (II)": 3
+          },
+          "proportions": {
+            "Cu (II)": 0.3227848101265823,
+            "Pb (II)": 0.2626582278481013,
+            "Cd (II)": 0.14873417721518986,
+            "Cr (VI)": 0.08860759493670886,
+            "Hg (II)": 0.07278481012658228,
+            "Zn (II)": 0.0379746835443038,
+            "Ni (II)": 0.03164556962025317,
+            "As (III)": 0.02531645569620253,
+            "Mn (II)": 0.00949367088607595
+          },
+          "summary_type": "descriptive_only"
+        }
+      },
+      "technical_provenance_factors": {
+        "quality_flags": {
+          "n_categories": 13,
+          "counts": {
+            "none": 102,
+            "pH_missing": 95,
+            "imputed_rpm": 48,
+            "extreme_qm": 14,
+            "imputed_rpm;pH_missing": 14,
+            "imputed_Temp;pH_missing": 14,
+            "imputed_AIC": 11,
+            "extreme_qm;pH_missing": 10,
+            "imputed_rpm;imputed_AIC;imputed_Temp;pH_missing": 2,
+            "extreme_qm;imputed_AIC;pH_missing": 2,
+            "imputed_Temp": 2,
+            "imputed_AIC;pH_missing": 1,
+            "imputed_rpm;imputed_AIC": 1
+          },
+          "proportions": {
+            "none": 0.3227848101265823,
+            "pH_missing": 0.30063291139240506,
+            "imputed_rpm": 0.1518987341772152,
+            "extreme_qm": 0.04430379746835443,
+            "imputed_rpm;pH_missing": 0.04430379746835443,
+            "imputed_Temp;pH_missing": 0.04430379746835443,
+            "imputed_AIC": 0.03481012658227848,
+            "extreme_qm;pH_missing": 0.03164556962025317,
+            "imputed_rpm;imputed_AIC;imputed_Temp;pH_missing": 0.006329113924050633,
+            "extreme_qm;imputed_AIC;pH_missing": 0.006329113924050633,
+            "imputed_Temp": 0.006329113924050633,
+            "imputed_AIC;pH_missing": 0.0031645569620253164,
+            "imputed_rpm;imputed_AIC": 0.0031645569620253164
+          },
+          "summary_type": "descriptive_only"
+        },
+        "Study_ID": {
+          "n_categories": 50,
+          "counts": {
+            "(Mao et al., 2020)": 35,
+            "(Qiongjie et al., 2022)": 30,
+            "(Li_Zhang 2022)": 15,
+            "(Qiu et al., 2022)": 12,
+            "(Wang_Qui 2022)": 12,
+            "(Muthuraja et al., 2024)": 12,
+            "(Zhou_chen 2022)": 11,
+            "(Dai et al., 2025)": 10,
+            "(Lin et al., 2022)": 9,
+            "(Gao et al., 2021)": 8,
+            "(Wang et al., 2021)": 8,
+            "(Wang et al., 2023)": 8,
+            "(Yang et al., 2019)": 7,
+            "(Dong et al., 2020)": 7,
+            "(Li_li 2022)": 7,
+            "(Liu_Huang 2022)": 7,
+            "(Jiang et al., 2022)": 6,
+            "(Zhou_Sun 2022)": 6,
+            "(Li et al., 2024)": 6,
+            "(Chen et al., 2025)": 6,
+            "(Li et al., 2021)": 5,
+            "(Gao et al., 2023)": 5,
+            "(Yu et al., 2023)": 5,
+            "(Li et al., 2019)": 4,
+            "(Guo et al., 2020)": 4,
+            "(Xue et al., 2021)": 4,
+            "(Li_zu 2022)": 4,
+            "(Liu_Zhang 2022)": 4,
+            "(Huang et al., 2023)": 4,
+            "(Huang et al., 2024)": 4,
+            "(Hu et al., 2024)": 4,
+            "(Hu et al., 2024b)": 4,
+            "(Wang et al., 2020)": 3,
+            "(Lin et al., 2021)": 3,
+            "(Qi et al., 2021)": 3,
+            "(Yu et al., 2021)": 3,
+            "(He et al., 2022)": 3,
+            "(Li_Wang 2022)": 3,
+            "(Nguyen et al., 2022)": 3,
+            "(Tang et al., 2022)": 3,
+            "(Wang_Wang 2022)": 3,
+            "(Zhao et al., 2022)": 3,
+            "(Tang_Lin 2020)": 2,
+            "(Wang_wang 2020)": 2,
+            "(Sun et al., 2022)": 2,
+            "(Sun et al., 2023)": 2,
+            "(Jiang et al., 2025)": 2,
+            "(Wang et al., 2019)": 1,
+            "(Sathyamoorthy et al., 2022)": 1,
+            "(Saravanakumar et al., 2024)": 1
+          },
+          "proportions": {
+            "(Mao et al., 2020)": 0.11075949367088607,
+            "(Qiongjie et al., 2022)": 0.0949367088607595,
+            "(Li_Zhang 2022)": 0.04746835443037975,
+            "(Qiu et al., 2022)": 0.0379746835443038,
+            "(Wang_Qui 2022)": 0.0379746835443038,
+            "(Muthuraja et al., 2024)": 0.0379746835443038,
+            "(Zhou_chen 2022)": 0.03481012658227848,
+            "(Dai et al., 2025)": 0.03164556962025317,
+            "(Lin et al., 2022)": 0.028481012658227847,
+            "(Gao et al., 2021)": 0.02531645569620253,
+            "(Wang et al., 2021)": 0.02531645569620253,
+            "(Wang et al., 2023)": 0.02531645569620253,
+            "(Yang et al., 2019)": 0.022151898734177215,
+            "(Dong et al., 2020)": 0.022151898734177215,
+            "(Li_li 2022)": 0.022151898734177215,
+            "(Liu_Huang 2022)": 0.022151898734177215,
+            "(Jiang et al., 2022)": 0.0189873417721519,
+            "(Zhou_Sun 2022)": 0.0189873417721519,
+            "(Li et al., 2024)": 0.0189873417721519,
+            "(Chen et al., 2025)": 0.0189873417721519,
+            "(Li et al., 2021)": 0.015822784810126583,
+            "(Gao et al., 2023)": 0.015822784810126583,
+            "(Yu et al., 2023)": 0.015822784810126583,
+            "(Li et al., 2019)": 0.012658227848101266,
+            "(Guo et al., 2020)": 0.012658227848101266,
+            "(Xue et al., 2021)": 0.012658227848101266,
+            "(Li_zu 2022)": 0.012658227848101266,
+            "(Liu_Zhang 2022)": 0.012658227848101266,
+            "(Huang et al., 2023)": 0.012658227848101266,
+            "(Huang et al., 2024)": 0.012658227848101266,
+            "(Hu et al., 2024)": 0.012658227848101266,
+            "(Hu et al., 2024b)": 0.012658227848101266,
+            "(Wang et al., 2020)": 0.00949367088607595,
+            "(Lin et al., 2021)": 0.00949367088607595,
+            "(Qi et al., 2021)": 0.00949367088607595,
+            "(Yu et al., 2021)": 0.00949367088607595,
+            "(He et al., 2022)": 0.00949367088607595,
+            "(Li_Wang 2022)": 0.00949367088607595,
+            "(Nguyen et al., 2022)": 0.00949367088607595,
+            "(Tang et al., 2022)": 0.00949367088607595,
+            "(Wang_Wang 2022)": 0.00949367088607595,
+            "(Zhao et al., 2022)": 0.00949367088607595,
+            "(Tang_Lin 2020)": 0.006329113924050633,
+            "(Wang_wang 2020)": 0.006329113924050633,
+            "(Sun et al., 2022)": 0.006329113924050633,
+            "(Sun et al., 2023)": 0.006329113924050633,
+            "(Jiang et al., 2025)": 0.006329113924050633,
+            "(Wang et al., 2019)": 0.0031645569620253164,
+            "(Sathyamoorthy et al., 2022)": 0.0031645569620253164,
+            "(Saravanakumar et al., 2024)": 0.0031645569620253164
+          },
+          "summary_type": "descriptive_only"
+        },
+        "quality_category": {
+          "n_categories": 2,
+          "counts": {
+            "high": 290,
+            "medium": 26
+          },
+          "proportions": {
+            "high": 0.9177215189873418,
+            "medium": 0.08227848101265822
+          },
+          "summary_type": "descriptive_only"
+        }
+      }
+    },
+    "Metal": {
+      "n_categories": 9,
+      "counts": {
+        "Cu": 102,
+        "Pb": 83,
+        "Cd": 47,
+        "Cr": 28,
+        "Hg": 23,
+        "Zn": 12,
+        "Ni": 10,
+        "As": 8,
+        "Mn": 3
+      },
+      "proportions": {
+        "Cu": 0.3227848101265823,
+        "Pb": 0.2626582278481013,
+        "Cd": 0.14873417721518986,
+        "Cr": 0.08860759493670886,
+        "Hg": 0.07278481012658228,
+        "Zn": 0.0379746835443038,
+        "Ni": 0.03164556962025317,
+        "As": 0.02531645569620253,
+        "Mn": 0.00949367088607595
+      },
+      "log_Qm_by_category": {
+        "mean": {
+          "As": 8.909534432278356,
+          "Cd": 5.8291801192347705,
+          "Cr": 6.631548159890696,
+          "Cu": 5.2000478647612205,
+          "Hg": 2.613714348900102,
+          "Mn": 6.574451582827693,
+          "Ni": 4.347804469148921,
+          "Pb": 6.417383123266459,
+          "Zn": 4.68508284240171
+        },
+        "std": {
+          "As": 0.6276821028118426,
+          "Cd": 1.4073670334167618,
+          "Cr": 1.1953338292113918,
+          "Cu": 2.3787923838238854,
+          "Hg": 1.252030207618322,
+          "Mn": 0.38642598511532195,
+          "Ni": 1.3460027489694453,
+          "Pb": 2.041900250766167,
+          "Zn": 1.0516901774288756
+        },
+        "count": {
+          "As": 8,
+          "Cd": 47,
+          "Cr": 28,
+          "Cu": 102,
+          "Hg": 23,
+          "Mn": 3,
+          "Ni": 10,
+          "Pb": 83,
+          "Zn": 12
+        }
+      },
+      "min_group_size": 3,
+      "kruskal_wallis": {
+        "h_statistic": 85.28078114523092,
+        "p_value": 4.20457703366076e-15,
+        "epsilon_squared": 0.25172892881182707,
+        "min_group_size": 3
+      }
+    },
+    "AgS": {
+      "n_categories": 2,
+      "counts": {
+        "Aged": 165,
+        "Virgin": 151
+      },
+      "proportions": {
+        "Aged": 0.5221518987341772,
+        "Virgin": 0.4778481012658228
+      },
+      "log_Qm_by_category": {
+        "mean": {
+          "Aged": 5.521794703855963,
+          "Virgin": 5.711393830551142
+        },
+        "std": {
+          "Aged": 2.1167550510931386,
+          "Virgin": 2.3047033399359926
+        },
+        "count": {
+          "Aged": 165,
+          "Virgin": 151
+        }
+      },
+      "min_group_size": 151,
+      "anova": {
+        "f_statistic": 0.5810823708480214,
+        "p_value": 0.4464605984441209,
+        "eta_squared": 0.0018471624754695351,
+        "min_group_size": 151
+      }
+    },
+    "ReT": {
+      "n_categories": 15,
+      "counts": {
+        "PS": 135,
+        "PE": 45,
+        "PA": 27,
+        "PVC": 26,
+        "PLA": 24,
+        "PP": 20,
+        "PET": 13,
+        "PBAT": 8,
+        "PBS": 5,
+        "TPU": 4,
+        "PBT": 3,
+        "PMMA": 2,
+        "nylon": 2,
+        "Mix": 1,
+        "HDPE": 1
+      },
+      "proportions": {
+        "PS": 0.4272151898734177,
+        "PE": 0.14240506329113925,
+        "PA": 0.08544303797468354,
+        "PVC": 0.08227848101265822,
+        "PLA": 0.0759493670886076,
+        "PP": 0.06329113924050633,
+        "PET": 0.04113924050632911,
+        "PBAT": 0.02531645569620253,
+        "PBS": 0.015822784810126583,
+        "TPU": 0.012658227848101266,
+        "PBT": 0.00949367088607595,
+        "PMMA": 0.006329113924050633,
+        "nylon": 0.006329113924050633,
+        "Mix": 0.0031645569620253164,
+        "HDPE": 0.0031645569620253164
+      },
+      "log_Qm_by_category": {
+        "mean": {
+          "HDPE": 3.417726683613366,
+          "Mix": 7.833203948641057,
+          "PA": 6.089499799921766,
+          "PBAT": 7.356103875041291,
+          "PBS": 6.456781294903131,
+          "PBT": 8.784848046617563,
+          "PE": 5.020055515070791,
+          "PET": 4.6425287040684555,
+          "PLA": 6.593528044406451,
+          "PMMA": 4.044035217478699,
+          "PP": 5.3558395548280435,
+          "PS": 5.204332957616892,
+          "PVC": 6.917142520678886,
+          "TPU": 6.287079959106705,
+          "nylon": 6.5390035619543605
+        },
+        "std": {
+          "HDPE": NaN,
+          "Mix": NaN,
+          "PA": 1.2907755947968589,
+          "PBAT": 1.624276576275226,
+          "PBS": 1.5900223898054247,
+          "PBT": 0.48408884204360647,
+          "PE": 2.622954890225202,
+          "PET": 1.6105214247732578,
+          "PLA": 1.6584947256314926,
+          "PMMA": 0.46734546968968893,
+          "PP": 3.0995879124622236,
+          "PS": 2.0621355991227395,
+          "PVC": 2.101163006579393,
+          "TPU": 0.13106907337538787,
+          "nylon": 0.5653541744941636
+        },
+        "count": {
+          "HDPE": 1,
+          "Mix": 1,
+          "PA": 27,
+          "PBAT": 8,
+          "PBS": 5,
+          "PBT": 3,
+          "PE": 45,
+          "PET": 13,
+          "PLA": 24,
+          "PMMA": 2,
+          "PP": 20,
+          "PS": 135,
+          "PVC": 26,
+          "TPU": 4,
+          "nylon": 2
+        }
+      },
+      "min_group_size": 1,
+      "kruskal_wallis": {
+        "h_statistic": 46.4721280106879,
+        "p_value": 2.346736297018973e-05,
+        "epsilon_squared": 0.10788082395577374,
+        "min_group_size": 1
+      }
+    },
+    "Adc": {
+      "n_categories": 2,
+      "counts": {
+        "Single-ion": 229,
+        "Mixed": 87
+      },
+      "proportions": {
+        "Single-ion": 0.7246835443037974,
+        "Mixed": 0.27531645569620256
+      },
+      "log_Qm_by_category": {
+        "mean": {
+          "Mixed": 5.7409355737560075,
+          "Single-ion": 5.563559823723509
+        },
+        "std": {
+          "Mixed": 2.473163749109961,
+          "Single-ion": 2.100964574792336
+        },
+        "count": {
+          "Mixed": 87,
+          "Single-ion": 229
+        }
+      },
+      "min_group_size": 87,
+      "anova": {
+        "f_statistic": 0.40644914205966537,
+        "p_value": 0.5242418977821242,
+        "eta_squared": 0.0012927506518036391,
+        "min_group_size": 87
+      }
+    },
+    "Aged condition": {
+      "n_categories": 36,
+      "counts": {
+        "Lab: UV": 35,
+        "Nature: air-sun": 9,
+        "Lab: Sulfur, anaerobiosis": 6,
+        "Lab: Wastewater": 6,
+        "Lab: 1 month UV": 5,
+        "Lab: 2 month UV": 5,
+        "Lab: 3 month UV": 5,
+        "Lab: 3 month-pure water": 5,
+        "Lab: 3 month-sea water": 5,
+        "Lab: 3 month-air": 5,
+        "Lab+Nature: H202-Sunlight": 5,
+        "Lab: UV seawater": 4,
+        "Lab: H2O2": 4,
+        "Lab: sludge-hydrothermal treatment": 4,
+        "Lab: Alkaline aging": 3,
+        "Lab: O3 water": 3,
+        "Nature: coastal aquaculture": 2,
+        "Lab: Aeration tank": 2,
+        "Nature: Lake": 2,
+        "Lab: air incubating": 2,
+        "Lab: water incubating": 2,
+        "Lab: soil incubating": 2,
+        "Lab: wastewater-incubation": 2,
+        "Nature: river": 2,
+        "Lab: UV/O3": 2,
+        "Lab: (biofilm) real wastewater": 2,
+        "Lab: biodegraded MP": 2,
+        "Lab: distilled-water": 2,
+        "Lab: tap-water": 2,
+        "Lab: surface water": 2,
+        "Lab: wastewater": 2,
+        "Nature: Sludge": 1,
+        "Lab: Wastewater, 20d": 1,
+        "Lab: Wastewater pipeline": 1,
+        "Lab: Grit tank": 1,
+        "Lab: wastewater, aeration": 1
+      },
+      "proportions": {
+        "Lab: UV": 0.24305555555555555,
+        "Nature: air-sun": 0.0625,
+        "Lab: Sulfur, anaerobiosis": 0.041666666666666664,
+        "Lab: Wastewater": 0.041666666666666664,
+        "Lab: 1 month UV": 0.034722222222222224,
+        "Lab: 2 month UV": 0.034722222222222224,
+        "Lab: 3 month UV": 0.034722222222222224,
+        "Lab: 3 month-pure water": 0.034722222222222224,
+        "Lab: 3 month-sea water": 0.034722222222222224,
+        "Lab: 3 month-air": 0.034722222222222224,
+        "Lab+Nature: H202-Sunlight": 0.034722222222222224,
+        "Lab: UV seawater": 0.027777777777777776,
+        "Lab: H2O2": 0.027777777777777776,
+        "Lab: sludge-hydrothermal treatment": 0.027777777777777776,
+        "Lab: Alkaline aging": 0.020833333333333332,
+        "Lab: O3 water": 0.020833333333333332,
+        "Nature: coastal aquaculture": 0.013888888888888888,
+        "Lab: Aeration tank": 0.013888888888888888,
+        "Nature: Lake": 0.013888888888888888,
+        "Lab: air incubating": 0.013888888888888888,
+        "Lab: water incubating": 0.013888888888888888,
+        "Lab: soil incubating": 0.013888888888888888,
+        "Lab: wastewater-incubation": 0.013888888888888888,
+        "Nature: river": 0.013888888888888888,
+        "Lab: UV/O3": 0.013888888888888888,
+        "Lab: (biofilm) real wastewater": 0.013888888888888888,
+        "Lab: biodegraded MP": 0.013888888888888888,
+        "Lab: distilled-water": 0.013888888888888888,
+        "Lab: tap-water": 0.013888888888888888,
+        "Lab: surface water": 0.013888888888888888,
+        "Lab: wastewater": 0.013888888888888888,
+        "Nature: Sludge": 0.006944444444444444,
+        "Lab: Wastewater, 20d": 0.006944444444444444,
+        "Lab: Wastewater pipeline": 0.006944444444444444,
+        "Lab: Grit tank": 0.006944444444444444,
+        "Lab: wastewater, aeration": 0.006944444444444444
+      },
+      "log_Qm_by_category": {
+        "mean": {
+          "Lab+Nature: H202-Sunlight": 2.2418879349254888,
+          "Lab: (biofilm) real wastewater": 8.99146139475397,
+          "Lab: 1 month UV": 5.007034304818951,
+          "Lab: 2 month UV": 5.096497556581871,
+          "Lab: 3 month UV": 5.222789215578887,
+          "Lab: 3 month-air": 5.222789215578887,
+          "Lab: 3 month-pure water": 5.377516809734985,
+          "Lab: 3 month-sea water": 5.265239513052179,
+          "Lab: Aeration tank": 5.236106721450625,
+          "Lab: Alkaline aging": 6.574451582827693,
+          "Lab: Grit tank": 4.840242308167575,
+          "Lab: H2O2": 5.79795176856037,
+          "Lab: O3 water": 3.0546346791466434,
+          "Lab: Sulfur, anaerobiosis": 4.065129246230926,
+          "Lab: UV": 6.78154677396041,
+          "Lab: UV seawater": 7.638008994355518,
+          "Lab: UV/O3": 6.797504880747605,
+          "Lab: Wastewater": 7.561445933326745,
+          "Lab: Wastewater pipeline": 7.6638772587034705,
+          "Lab: Wastewater, 20d": 6.63620898843976,
+          "Lab: air incubating": 5.615254751095474,
+          "Lab: biodegraded MP": 5.783706825127149,
+          "Lab: distilled-water": 7.309775659255122,
+          "Lab: sludge-hydrothermal treatment": 7.343315024822083,
+          "Lab: soil incubating": 5.554579456748822,
+          "Lab: surface water": 6.368900146017823,
+          "Lab: tap-water": 6.708738880836703,
+          "Lab: wastewater": 6.694807072491795,
+          "Lab: wastewater, aeration": 3.4469607474733928,
+          "Lab: wastewater-incubation": 6.126027688176714,
+          "Lab: water incubating": 4.734811484953132,
+          "Nature: Lake": 7.063493641395034,
+          "Nature: Sludge": 7.833203948641057,
+          "Nature: air-sun": 1.0052197071417577,
+          "Nature: coastal aquaculture": 6.5390035619543605,
+          "Nature: river": 9.4276202344574
+        },
+        "std": {
+          "Lab+Nature: H202-Sunlight": 0.19721240281200964,
+          "Lab: (biofilm) real wastewater": 0.1589671259029326,
+          "Lab: 1 month UV": 0.1589257433270256,
+          "Lab: 2 month UV": 0.13007157779638268,
+          "Lab: 3 month UV": 0.06844476317907701,
+          "Lab: 3 month-air": 0.06844476317907701,
+          "Lab: 3 month-pure water": 0.26456383926617794,
+          "Lab: 3 month-sea water": 0.1567479659965922,
+          "Lab: Aeration tank": 1.6753759004430535,
+          "Lab: Alkaline aging": 0.38642598511532195,
+          "Lab: Grit tank": NaN,
+          "Lab: H2O2": 0.18264913841869718,
+          "Lab: O3 water": 0.2862042201336323,
+          "Lab: Sulfur, anaerobiosis": 1.0348254357870712,
+          "Lab: UV": 1.476801471478464,
+          "Lab: UV seawater": 0.49225773613846213,
+          "Lab: UV/O3": 0.12301080064487477,
+          "Lab: Wastewater": 1.3060424281677512,
+          "Lab: Wastewater pipeline": NaN,
+          "Lab: Wastewater, 20d": NaN,
+          "Lab: air incubating": 0.573843454836001,
+          "Lab: biodegraded MP": 1.847486186537219,
+          "Lab: distilled-water": 0.620393378081383,
+          "Lab: sludge-hydrothermal treatment": 0.27715928278013696,
+          "Lab: soil incubating": 0.2934096116052084,
+          "Lab: surface water": 1.0281234665290462,
+          "Lab: tap-water": 0.48890886991088384,
+          "Lab: wastewater": 0.6678352081817226,
+          "Lab: wastewater, aeration": NaN,
+          "Lab: wastewater-incubation": 0.4899651784185766,
+          "Lab: water incubating": 0.07450113509096042,
+          "Nature: Lake": 0.0836467515628529,
+          "Nature: Sludge": NaN,
+          "Nature: air-sun": 0.6775887225575572,
+          "Nature: coastal aquaculture": 0.5653541744941636,
+          "Nature: river": 0.5026018333673619
+        },
+        "count": {
+          "Lab+Nature: H202-Sunlight": 5,
+          "Lab: (biofilm) real wastewater": 2,
+          "Lab: 1 month UV": 5,
+          "Lab: 2 month UV": 5,
+          "Lab: 3 month UV": 5,
+          "Lab: 3 month-air": 5,
+          "Lab: 3 month-pure water": 5,
+          "Lab: 3 month-sea water": 5,
+          "Lab: Aeration tank": 2,
+          "Lab: Alkaline aging": 3,
+          "Lab: Grit tank": 1,
+          "Lab: H2O2": 4,
+          "Lab: O3 water": 3,
+          "Lab: Sulfur, anaerobiosis": 6,
+          "Lab: UV": 35,
+          "Lab: UV seawater": 4,
+          "Lab: UV/O3": 2,
+          "Lab: Wastewater": 6,
+          "Lab: Wastewater pipeline": 1,
+          "Lab: Wastewater, 20d": 1,
+          "Lab: air incubating": 2,
+          "Lab: biodegraded MP": 2,
+          "Lab: distilled-water": 2,
+          "Lab: sludge-hydrothermal treatment": 4,
+          "Lab: soil incubating": 2,
+          "Lab: surface water": 2,
+          "Lab: tap-water": 2,
+          "Lab: wastewater": 2,
+          "Lab: wastewater, aeration": 1,
+          "Lab: wastewater-incubation": 2,
+          "Lab: water incubating": 2,
+          "Nature: Lake": 2,
+          "Nature: Sludge": 1,
+          "Nature: air-sun": 9,
+          "Nature: coastal aquaculture": 2,
+          "Nature: river": 2
+        }
+      },
+      "min_group_size": 1,
+      "kruskal_wallis": {
+        "h_statistic": 110.88120140668181,
+        "p_value": 8.165667702675612e-10,
+        "epsilon_squared": 0.7026037167285353,
+        "min_group_size": 1
+      }
+    },
+    "Solution- added agent": {
+      "n_categories": 18,
+      "counts": {
+        "HA": 12,
+        "Pb": 12,
+        "Cu": 12,
+        "HBCD ": 9,
+        "tetracycline": 6,
+        "FA": 5,
+        "TC": 5,
+        "hexabromocyclododecane ": 3,
+        "HA ": 3,
+        "Na": 3,
+        "Ca": 3,
+        "OTC": 2,
+        "SDBS": 2,
+        "TA": 2,
+        "CTAB": 1,
+        "CTAB ": 1,
+        "P-PBAT": 1,
+        "D-PBAT": 1
+      },
+      "proportions": {
+        "HA": 0.14457831325301204,
+        "Pb": 0.14457831325301204,
+        "Cu": 0.14457831325301204,
+        "HBCD ": 0.10843373493975904,
+        "tetracycline": 0.07228915662650602,
+        "FA": 0.060240963855421686,
+        "TC": 0.060240963855421686,
+        "hexabromocyclododecane ": 0.03614457831325301,
+        "HA ": 0.03614457831325301,
+        "Na": 0.03614457831325301,
+        "Ca": 0.03614457831325301,
+        "OTC": 0.024096385542168676,
+        "SDBS": 0.024096385542168676,
+        "TA": 0.024096385542168676,
+        "CTAB": 0.012048192771084338,
+        "CTAB ": 0.012048192771084338,
+        "P-PBAT": 0.012048192771084338,
+        "D-PBAT": 0.012048192771084338
+      },
+      "log_Qm_by_category": {
+        "mean": {
+          "CTAB": 6.177321513636175,
+          "CTAB ": 7.226281734728899,
+          "Ca": 8.75257775277657,
+          "Cu": 3.0598716704370283,
+          "D-PBAT": 5.147872312401341,
+          "FA": 8.194214570069786,
+          "HA": 8.400787257712869,
+          "HA ": 6.574451582827693,
+          "HBCD ": 3.0621885450910247,
+          "Na": 9.102769457275453,
+          "OTC": 6.387236298316052,
+          "P-PBAT": 4.945541952407557,
+          "Pb": 2.779128050194231,
+          "SDBS": 7.383895286076885,
+          "TA": 8.457504646172753,
+          "TC": 5.308737172912825,
+          "hexabromocyclododecane ": 6.660727835954585,
+          "tetracycline": 5.537991243034194
+        },
+        "std": {
+          "CTAB": NaN,
+          "CTAB ": NaN,
+          "Ca": 0.3794246398130025,
+          "Cu": 0.4192595832908349,
+          "D-PBAT": NaN,
+          "FA": 1.38096471923941,
+          "HA": 0.5988766121990837,
+          "HA ": 0.38642598511532195,
+          "HBCD ": 0.5818853440783633,
+          "Na": 0.6210681489177122,
+          "OTC": 0.04402254150062737,
+          "P-PBAT": NaN,
+          "Pb": 0.48739585956647924,
+          "SDBS": 0.6299145281911791,
+          "TA": 0.05612999308278942,
+          "TC": 1.1142919866904788,
+          "hexabromocyclododecane ": 0.17284426488104046,
+          "tetracycline": 0.3340719849693729
+        },
+        "count": {
+          "CTAB": 1,
+          "CTAB ": 1,
+          "Ca": 3,
+          "Cu": 12,
+          "D-PBAT": 1,
+          "FA": 5,
+          "HA": 12,
+          "HA ": 3,
+          "HBCD ": 9,
+          "Na": 3,
+          "OTC": 2,
+          "P-PBAT": 1,
+          "Pb": 12,
+          "SDBS": 2,
+          "TA": 2,
+          "TC": 5,
+          "hexabromocyclododecane ": 3,
+          "tetracycline": 6
+        }
+      },
+      "min_group_size": 1,
+      "kruskal_wallis": {
+        "h_statistic": 73.95254510831474,
+        "p_value": 4.452809858058829e-09,
+        "epsilon_squared": 0.8761930016663806,
+        "min_group_size": 1
+      }
+    },
+    "Hardness": {
+      "n_categories": 3,
+      "counts": {
+        "borderline": 207,
+        "soft": 70,
+        "hard": 3
+      },
+      "proportions": {
+        "borderline": 0.7392857142857143,
+        "soft": 0.25,
+        "hard": 0.010714285714285714
+      },
+      "log_Qm_by_category": {
+        "mean": {
+          "borderline": 5.617133914188746,
+          "hard": 6.574451582827693,
+          "soft": 4.772669937553379
+        },
+        "std": {
+          "borderline": 2.2461585379553926,
+          "hard": 0.38642598511532195,
+          "soft": 2.0332925459884588
+        },
+        "count": {
+          "borderline": 207,
+          "hard": 3,
+          "soft": 70
+        }
+      },
+      "min_group_size": 3,
+      "kruskal_wallis": {
+        "h_statistic": 9.480227825920622,
+        "p_value": 0.00873765079711209,
+        "epsilon_squared": 0.027004432584550982,
+        "min_group_size": 3
+      }
+    }
+  },
+  "continuous_predictors": {
+    "constant_features_skipped": [
+      "Valence (nunique<2)"
+    ],
+    "binary_indicator_analysis": {
+      "Temp_missing": {
+        "n0": 298,
+        "n1": 18,
+        "test": "point_biserial",
+        "r_pb": -0.03177818799301348,
+        "p_value": 0.5735677190626647
+      },
+      "pH_missing": {
+        "n0": 178,
+        "n1": 138,
+        "test": "point_biserial",
+        "r_pb": 0.14315666096414809,
+        "p_value": 0.010838600832984397
+      },
+      "rpm_missing": {
+        "n0": 251,
+        "n1": 65,
+        "test": "point_biserial",
+        "r_pb": -0.30936398933220427,
+        "p_value": 1.9549228019150265e-08
+      },
+      "imputed_AIC": {
+        "n0": 299,
+        "n1": 17,
+        "test": "point_biserial",
+        "r_pb": 0.1147116815453062,
+        "p_value": 0.0415689477616481
+      },
+      "imputed_Temp": {
+        "n0": 298,
+        "n1": 18,
+        "test": "point_biserial",
+        "r_pb": -0.03177818799301348,
+        "p_value": 0.5735677190626647
+      },
+      "imputed_rpm": {
+        "n0": 251,
+        "n1": 65,
+        "test": "point_biserial",
+        "r_pb": -0.30936398933220427,
+        "p_value": 1.9549228019150265e-08
+      },
+      "metal_descriptor_missing_unmatched": {
+        "n0": 316,
+        "n1": 0,
+        "test": "descriptive_only"
+      },
+      "metal_descriptor_missing_speciation": {
+        "n0": 280,
+        "n1": 36,
+        "test": "point_biserial",
+        "r_pb": 0.24821107490555858,
+        "p_value": 8.011488736587508e-06
+      },
+      "species_requires_speciation": {
+        "n0": 280,
+        "n1": 36,
+        "test": "point_biserial",
+        "r_pb": 0.24821107490555858,
+        "p_value": 8.011488736587508e-06
+      },
+      "metal_descriptor_missing_any": {
+        "n0": 280,
+        "n1": 36,
+        "test": "point_biserial",
+        "r_pb": 0.24821107490555858,
+        "p_value": 8.011488736587508e-06
+      }
+    },
+    "AIC": {
+      "n": 316,
+      "mean": 14.914269620253165,
+      "std": 22.668798951780854,
+      "min": 0.01025,
+      "max": 102.5,
+      "median": 10.1,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "spearman_with_log_Qm": {
+        "rho": 0.20656702706142768,
+        "p_value": 0.00021780262060722483,
+        "n": 316
+      }
+    },
+    "Temp_missing": {
+      "n": 316,
+      "mean": 0.056962025316455694,
+      "std": 0.23213764078156543,
+      "min": 0.0,
+      "max": 1.0,
+      "median": 0.0,
+      "missing": 0,
+      "missing_pct": 0.0
+    },
+    "pH": {
+      "n": 178,
+      "mean": 6.357303370786516,
+      "std": 0.7148762510664739,
+      "min": 4.0,
+      "max": 7.0,
+      "median": 6.8,
+      "missing": 138,
+      "missing_pct": 43.67088607594937,
+      "spearman_with_log_Qm": {
+        "rho": -0.04079151045405247,
+        "p_value": 0.5887712525759756,
+        "n": 178
+      }
+    },
+    "Electronegativity": {
+      "n": 280,
+      "mean": 1.9863214285714281,
+      "std": 0.24452067860036883,
+      "min": 1.55,
+      "max": 2.33,
+      "median": 1.9,
+      "missing": 36,
+      "missing_pct": 11.39240506329114,
+      "spearman_with_log_Qm": {
+        "rho": 0.10701779878073643,
+        "p_value": 0.07379582378022717,
+        "n": 280
+      }
+    },
+    "rpm": {
+      "n": 316,
+      "mean": 160.44303797468353,
+      "std": 40.42386434421118,
+      "min": 30.0,
+      "max": 270.0,
+      "median": 160.0,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "spearman_with_log_Qm": {
+        "rho": 0.00883235966415696,
+        "p_value": 0.8757269566310231,
+        "n": 316
+      }
+    },
+    "SA": {
+      "n": 125,
+      "mean": 3.318064320000001,
+      "std": 10.923098512345614,
+      "min": 0.001,
+      "max": 99.568,
+      "median": 0.7573,
+      "missing": 191,
+      "missing_pct": 60.44303797468354,
+      "spearman_with_log_Qm": {
+        "rho": 0.1715682448379216,
+        "p_value": 0.055731227614055134,
+        "n": 125
+      }
+    },
+    "pH_missing": {
+      "n": 316,
+      "mean": 0.43670886075949367,
+      "std": 0.4967646985872764,
+      "min": 0.0,
+      "max": 1.0,
+      "median": 0.0,
+      "missing": 0,
+      "missing_pct": 0.0
+    },
+    "Valence": {
+      "n": 280,
+      "mean": 2.0,
+      "std": 0.0,
+      "min": 2.0,
+      "max": 2.0,
+      "median": 2.0,
+      "missing": 36,
+      "missing_pct": 11.39240506329114
+    },
+    "Charge_Density": {
+      "n": 280,
+      "mean": 2.2558575574715967,
+      "std": 0.46761307718292033,
+      "min": 1.680672268907563,
+      "max": 2.8985507246376816,
+      "median": 2.1052631578947367,
+      "missing": 36,
+      "missing_pct": 11.39240506329114,
+      "spearman_with_log_Qm": {
+        "rho": -0.18911610341419163,
+        "p_value": 0.001477345307122319,
+        "n": 280
+      }
+    },
+    "rpm_missing": {
+      "n": 316,
+      "mean": 0.20569620253164558,
+      "std": 0.40485053810975186,
+      "min": 0.0,
+      "max": 1.0,
+      "median": 0.0,
+      "missing": 0,
+      "missing_pct": 0.0
+    },
+    "Temp": {
+      "n": 316,
+      "mean": 24.917721518987342,
+      "std": 4.161753583200415,
+      "min": 5.0,
+      "max": 45.0,
+      "median": 25.0,
+      "missing": 0,
+      "missing_pct": 0.0,
+      "spearman_with_log_Qm": {
+        "rho": 0.12837180087761244,
+        "p_value": 0.022466035675638606,
+        "n": 316
+      }
+    },
+    "Ionic_Radius": {
+      "n": 280,
+      "mean": 0.9271785714285715,
+      "std": 0.19795433265968287,
+      "min": 0.69,
+      "max": 1.19,
+      "median": 0.95,
+      "missing": 36,
+      "missing_pct": 11.39240506329114,
+      "spearman_with_log_Qm": {
+        "rho": 0.18911610341419163,
+        "p_value": 0.001477345307122319,
+        "n": 280
+      }
+    },
+    "Hydration_Energy": {
+      "n": 280,
+      "mean": -1839.7464285714286,
+      "std": 260.00317751317635,
+      "min": -2105.0,
+      "max": -1481.0,
+      "median": -1824.0,
+      "missing": 36,
+      "missing_pct": 11.39240506329114,
+      "spearman_with_log_Qm": {
+        "rho": 0.25688779315570504,
+        "p_value": 1.3453931305675302e-05,
+        "n": 280
+      }
+    }
+  },
+  "constant_features_skipped": [
+    "Valence (nunique<2)"
+  ],
+  "tests_used_per_factor": {
+    "Metal": "kruskal_wallis",
+    "AgS": "anova",
+    "ReT": "kruskal_wallis",
+    "Adc": "anova",
+    "Aged condition": "kruskal_wallis",
+    "Solution- added agent": "kruskal_wallis",
+    "Hardness": "kruskal_wallis"
+  },
+  "min_group_size": {
+    "Metal": 3,
+    "AgS": 151,
+    "ReT": 1,
+    "Adc": 87,
+    "Aged condition": 1,
+    "Solution- added agent": 1,
+    "Hardness": 3
+  },
+  "study_variation": {
+    "n_studies": 50,
+    "total_observations": 316,
+    "obs_per_study_mean": 6.32,
+    "obs_per_study_std": 6.30982389223506,
+    "between_study_variance": 3.756724365648,
+    "overall_variance": 4.871142369062394,
+    "ICC_estimate": 0.7712203998609676
+  }
+}

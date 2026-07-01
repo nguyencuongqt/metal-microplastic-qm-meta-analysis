@@ -1,0 +1,101 @@
+{
+  "total_rows": 316,
+  "descriptor_completeness": {
+    "Hydration_Energy": 88.60759493670885,
+    "Ionic_Radius": 88.60759493670885,
+    "Valence": 88.60759493670885,
+    "Electronegativity": 88.60759493670885,
+    "Hardness": 88.60759493670885
+  },
+  "descriptor_coverage": {
+    "Hydration_Energy": 280,
+    "Ionic_Radius": 280,
+    "Valence": 280,
+    "Electronegativity": 280,
+    "Hardness": 280
+  },
+  "modeling_cautions": [
+    {
+      "type": "non_informative_predictor",
+      "predictor": "Valence",
+      "message": "Valence shows near-zero variance in enriched subset; treat Valence as non-informative for downstream modeling."
+    },
+    {
+      "type": "derived_feature_redundancy",
+      "predictors": [
+        "Charge_Density",
+        "Hydration_Energy_per_Charge",
+        "Softness_Parameter"
+      ],
+      "message": "Derived features may add limited new information because Valence is constant/nearly constant in enriched rows."
+    },
+    {
+      "type": "high_collinearity",
+      "predictor_pair": [
+        "Hydration_Energy",
+        "Ionic_Radius"
+      ],
+      "correlation_abs": 0.9903729420219568,
+      "message": "Hydration_Energy and Ionic_Radius are highly collinear (|r|=0.990). Do not treat them as independent predictors in downstream models."
+    }
+  ],
+  "valence_usability": {
+    "subset_rows": 280,
+    "n_valid": 280,
+    "unique_values": 1,
+    "std": 0.0,
+    "mean": 2.0,
+    "cv": 0.0,
+    "near_zero_variance": true,
+    "non_informative_for_modeling": true
+  },
+  "derived_feature_usability": {
+    "valence_near_zero_variance": true,
+    "affected_features": [
+      "Charge_Density",
+      "Hydration_Energy_per_Charge",
+      "Softness_Parameter"
+    ],
+    "warning": "Derived features may add limited new information because Valence is constant/nearly constant in enriched rows."
+  },
+  "correlations": {
+    "Hydration_Energy": {
+      "Hydration_Energy": 1.0,
+      "Ionic_Radius": 0.9903729420219568,
+      "Electronegativity": 0.7391142362471841
+    },
+    "Ionic_Radius": {
+      "Hydration_Energy": 0.9903729420219568,
+      "Ionic_Radius": 1.0,
+      "Electronegativity": 0.7410899175136341
+    },
+    "Electronegativity": {
+      "Hydration_Energy": 0.7391142362471841,
+      "Ionic_Radius": 0.7410899175136341,
+      "Electronegativity": 1.0
+    }
+  },
+  "high_correlations": [
+    {
+      "var1": "Hydration_Energy",
+      "var2": "Ionic_Radius",
+      "correlation": 0.9903729420219568
+    },
+    {
+      "var1": "Hydration_Energy",
+      "var2": "Electronegativity",
+      "correlation": 0.7391142362471841
+    },
+    {
+      "var1": "Ionic_Radius",
+      "var2": "Electronegativity",
+      "correlation": 0.7410899175136341
+    }
+  ],
+  "final_coverage_percent": 88.60759493670885,
+  "rows_processed": 316,
+  "n_cation_enriched": 280,
+  "n_speciation_flagged": 36,
+  "n_unmatched": 0,
+  "n_partial_missing": 0
+}

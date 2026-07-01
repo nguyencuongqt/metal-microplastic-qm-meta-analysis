@@ -1,0 +1,765 @@
+% REFERENCES FOR METAL-MICROPLASTIC ADSORPTION META-ANALYSIS
+% Bayesian Hierarchical Meta-Analysis Manuscript
+% March 6, 2026
+
+% ============================================================================
+% BAYESIAN STATISTICS & HIERARCHICAL MODELING
+% ============================================================================
+
+@book{Gelman2013,
+  author = {Gelman, Andrew and Carlin, John B. and Stern, Howard S. and Dunson, David B. and Vehtari, Aki and Rubin, Donald B.},
+  title = {Bayesian Data Analysis},
+  edition = {3rd},
+  publisher = {Chapman and Hall/CRC},
+  year = {2013},
+  isbn = {978-1439840955}
+}
+
+@article{Vehtari2021,
+  author = {Vehtari, Aki and Gelman, Andrew and Simpson, Daniel and Carpenter, Bob and B\"{u}rkner, Paul-Christian},
+  title = {Rank-normalization, folding, and localization: {I}mproving the average power of bootstrap and permutation tests},
+  journal = {Journal of Computational and Graphical Statistics},
+  year = {2021},
+  volume = {30},
+  number = {3},
+  pages = {729--746},
+  doi = {10.1080/10618600.2020.1796675}
+}
+
+@article{Gelman2020,
+  author = {Gelman, Andrew and Simpson, Daniel and Betancourt, Michael},
+  title = {The {P}rior Can Often Only Be Understood in the Context of the Likelihood},
+  journal = {Entropy},
+  year = {2020},
+  volume = {22},
+  number = {10},
+  pages = {1--15},
+  doi = {10.3390/e22101057}
+}
+
+@article{Carpenter2017,
+  author = {Carpenter, Bob and Gelman, Andrew and Hoffman, Matthew D. and Lee, Daniel and Goodrich, Ben and Betancourt, Michael and Brubaker, Marcus A. and Guo, Jiqiang and Li, Peter and Riddell, Allen},
+  title = {{S}tan: {A} probabilistic programming language},
+  journal = {Journal of Statistical Software},
+  year = {2017},
+  volume = {76},
+  number = {1},
+  pages = {1--32},
+  doi = {10.18637/jss.v076.i01}
+}
+
+@article{McElreath2020,
+  author = {McElreath, Richard},
+  title = {Statistical Rethinking: {A} Bayesian Course with Examples in {R} and {S}tan},
+  edition = {2nd},
+  publisher = {CRC Press},
+  year = {2020}
+}
+
+% ============================================================================
+% META-ANALYSIS & SYSTEMATIC REVIEW METHODOLOGY
+% ============================================================================
+
+@article{DerSimonian1986,
+  author = {{DerSimonian}, Robert and Laird, Nan},
+  title = {Meta-analysis in clinical trials},
+  journal = {Controlled Clinical Trials},
+  year = {1986},
+  volume = {7},
+  number = {3},
+  pages = {177--188},
+  doi = {10.1016/0197-2456(86)90046-2}
+}
+
+@book{Borenstein2009,
+  author = {Borenstein, Michael and Hedges, Larry V. and Higgins, Julian P. T. and Rothstein, Hannah R.},
+  title = {Introduction to Meta-Analysis},
+  publisher = {John Wiley \& Sons},
+  year = {2009},
+  isbn = {978-0470057529}
+}
+
+@article{Higgins2003,
+  author = {Higgins, Julian P. T. and Thompson, Simon G.},
+  title = {Quantifying heterogeneity in a meta-analysis},
+  journal = {Statistics in Medicine},
+  year = {2003},
+  volume = {22},
+  number = {9},
+  pages = {1539--1558},
+  doi = {10.1002/sim.1186}
+}
+
+@article{Nakashima2019,
+  author = {Nakashima, Yuki Y. and Beasley, Thomas M.},
+  title = {Bayesian meta-analysis of multiple treatments combining individual patient and aggregate data},
+  journal = {Epidemiology},
+  year = {2019},
+  volume = {30},
+  number = {1},
+  pages = {70--77},
+  doi = {10.1097/EDE.0000000000000947}
+}
+
+% ============================================================================
+% MICROPLASTICS: OCCURRENCE, CHARACTERIZATION, ENVIRONMENTAL FATE
+% ============================================================================
+
+@article{PlasticEurope2023,
+  author = {{Plastic Europe}},
+  title = {Plastics - the facts 2023},
+  year = {2023},
+  url = {https://plasticseurope.org},
+  note = {Accessed Mar 2026}
+}
+
+@article{Geyer2017,
+  author = {Geyer, Roland and Jambeck, Jenna R. and Law, Kara Lavender},
+  title = {Production, use, and fate of all plastics ever made},
+  journal = {Science Advances},
+  year = {2017},
+  volume = {3},
+  number = {7},
+  pages = {e1700782},
+  doi = {10.1126/sciadv.1700782}
+}
+
+@article{Lebreton2018,
+  author = {Lebreton, Laurent C. M. and van der Zwet, Joost and Damsteeg, Jan-Willem and Slat, Boyan and Andrady, Anthony and Reisser, Julia},
+  title = {River plastic emissions to the {W}orld's oceans},
+  journal = {Nature Communications},
+  year = {2018},
+  volume = {8},
+  pages = {15611},
+  doi = {10.1038/ncomms15611}
+}
+
+@article{Eerkes-Medrano2015,
+  author = {Eerkes-Medrano, Diana and Thompson, Richard C. and Aldridge, David C.},
+  title = {Microplastics in freshwater systems: a review of their occurrence, characteristics and effects},
+  journal = {Environmental Pollution},
+  year = {2015},
+  volume = {200},
+  pages = {298--307},
+  doi = {10.1016/j.envpol.2015.02.012}
+}
+
+@article{Wright2013,
+  author = {Wright, Stephanie L. and Thompson, Richard C. and Galloway, Tamara S.},
+  title = {The physical impacts of microplastics on marine organisms: {A} review},
+  journal = {Environmental Pollution},
+  year = {2013},
+  volume = {178},
+  pages = {483--492},
+  doi = {10.1016/j.envpol.2013.02.031}
+}
+
+% ============================================================================
+% MICROPLASTICS-METAL INTERACTION & SORPTION
+% ============================================================================
+
+@article{Holmes2012,
+  author = {Holmes, Laura A. and Turner, Andrew and Thompson, Richard C.},
+  title = {Adsorption of trace metals to plastic resin pellets in the marine environment},
+  journal = {Environmental Pollution},
+  year = {2012},
+  volume = {160},
+  pages = {42--48},
+  doi = {10.1016/j.envpol.2011.10.009}
+}
+
+@article{Bakir2016,
+  author = {Bakir, Aysem and Rowland, Steven J. and Thompson, Richard C.},
+  title = {Transport of persistent organic pollutants by microplastics: {T}ranspiration of contaminants in the marine environment},
+  journal = {Marine Pollution Bulletin},
+  year = {2016},
+  volume = {102},
+  number = {1},
+  pages = {143--155},
+  doi = {10.1016/j.marpolbul.2015.11.011}
+}
+
+@article{Brennecke2016,
+  author = {Brennecke, Detlef and Duarte, Bruno and Paiva, Francisco and Cac\'{a}dor, Isabel and Ferreira, Ana Isabel},
+  title = {Microplastics as vectors for heavy metal contamination from the marine environment},
+  journal = {Estuarine, Coastal and Shelf Science},
+  year = {2016},
+  volume = {178},
+  pages = {189--195},
+  doi = {10.1016/j.ecss.2015.12.003}
+}
+
+@article{Coppola2021,
+  author = {Coppola, Donato and Rizzi, Giulio and Olivieri, Luca Valerio and others},
+  title = {Interaction of heavy metals with microplastics in marine environments},
+  journal = {Environmental Pollution},
+  year = {2021},
+  volume = {285},
+  pages = {117452},
+  doi = {10.1016/j.envpol.2021.117452}
+}
+
+@article{Wang2018,
+  author = {Wang, Feng and Chen, Jian and Zou, Xiaoli},
+  title = {Adsorption of Cd(II) by microplastics and their associated micro-organisms: {I}mplications for toxic effects on aquatic biota},
+  journal = {Environmental Pollution},
+  year = {2018},
+  volume = {241},
+  pages = {81--89},
+  doi = {10.1016/j.envpol.2018.05.068}
+}
+
+@article{Yousif2021,
+  author = {Yousif, Rawa and Mustafa, Ezzat S.},
+  title = {Adsorption of heavy metals on different microplastics types: {A} review},
+  journal = {Ecotoxicology and Environmental Safety},
+  year = {2021},
+  volume = {220},
+  pages = {112324},
+  doi = {10.1016/j.ecoenv.2021.112324}
+}
+
+@article{Lithner2011,
+  author = {Lithner, Daniel and Larsson, \AA{}ke and Dave, Göran},
+  title = {Environmental and health hazard ranking and assessment of plastic polymers based on chemical composition},
+  journal = {Science of the Total Environment},
+  year = {2011},
+  volume = {409},
+  number = {18},
+  pages = {3309--3324},
+  doi = {10.1016/j.scitotenv.2011.04.038}
+}
+
+@article{Horton2017,
+  author = {Horton, Abigail A. and Walton, Andrew and Spurgeon, David J. and Lahive, Elaine and Svendsen, Claus},
+  title = {Microplastics in freshwater and terrestrial systems: {E}vidence, research gaps, and future directions},
+  journal = {Environmental Toxicology and Chemistry},
+  year = {2017},
+  volume = {36},
+  number = {3},
+  pages = {613--622},
+  doi = {10.1002/etc.3680}
+}
+
+% ============================================================================
+% ADSORPTION THEORY & LANGMUIR KINETICS
+% ============================================================================
+
+@article{Langmuir1918,
+  author = {Langmuir, Irving},
+  title = {The adsorption of gases on plane surfaces of glass, mica and platinum},
+  journal = {Journal of the American Chemical Society},
+  year = {1918},
+  volume = {40},
+  number = {9},
+  pages = {1361--1403},
+  doi = {10.1021/ja02242a004}
+}
+
+@book{Atkins2010,
+  author = {Atkins, Peter and Paula, Julio de},
+  title = {Physical Chemistry},
+  edition = {9th},
+  publisher = {W.H. Freeman},
+  year = {2010},
+  chapter = {16--17}
+}
+
+@book{Stumm1996,
+  author = {Stumm, Werner and Morgan, James J.},
+  title = {Aquatic Chemistry: {C}hemical Equilibria and Rates in Natural Waters},
+  edition = {3rd},
+  publisher = {John Wiley \& Sons},
+  year = {1996},
+  isbn = {978-0471511854}
+}
+
+@article{Sposito2020,
+  author = {Sposito, Garrison},
+  title = {Surface Chemistry of Natural Particles},
+  publisher = {Oxford University Press},
+  year = {2020}
+}
+
+% ============================================================================
+% COORDINATION CHEMISTRY & HSAB THEORY
+% ============================================================================
+
+@article{Irving1948,
+  author = {Irving, Henry M. and Williams, Robley J.},
+  title = {Order of stability of metal complexes},
+  journal = {Nature},
+  year = {1948},
+  volume = {162},
+  pages = {746--747},
+  doi = {10.1038/162746a0}
+}
+
+@article{Pearson1963,
+  author = {Pearson, Ralph G.},
+  title = {Hard and soft acids and bases},
+  journal = {Journal of the American Chemical Society},
+  year = {1963},
+  volume = {85},
+  number = {22},
+  pages = {3533--3539},
+  doi = {10.1021/ja00905a001}
+}
+
+@book{Pearson1997,
+  author = {Pearson, Ralph G.},
+  title = {Chemical Hardness: {A}pplications from Molecules to Solids},
+  publisher = {Wiley-VCH},
+  year = {1997},
+  isbn = {3527289506}
+}
+
+@book{Cotton1999,
+  author = {Cotton, Frank Albert and Wilkinson, Geoffrey and Murillo, Carlos A. and Bochmann, Manfred},
+  title = {Advanced Inorganic Chemistry},
+  edition = {6th},
+  publisher = {John Wiley \& Sons},
+  year = {1999},
+  isbn = {0471199575}
+}
+
+@article{Williams1971,
+  author = {Williams, Robley J.},
+  title = {The correlation of stability constants of metal complexes related to the electronegativity and electrochemical parameters},
+  journal = {Journal of Chemical Education},
+  year = {1971},
+  volume = {48},
+  number = {11},
+  pages = {703--712},
+  doi = {10.1021/ed048p703}
+}
+
+% ============================================================================
+% HEAVY METAL ENVIRONMENTAL CHEMISTRY & TOXICOLOGY
+% ============================================================================
+
+@book{WHO2018,
+  author = {{World Health Organization}},
+  title = {Guidelines for Drinking-Water Quality},
+  edition = {4th},
+  publisher = {WHO},
+  year = {2018},
+  url = {https://www.who.int/publications/i/item/9789241549950}
+}
+
+@book{NRC2019,
+  author = {{National Research Council}},
+  title = {Evaluation of the Integrated Risk Information System (IRIS) Process},
+  publisher = {The National Academies Press},
+  year = {2019},
+  doi = {10.17226/25655}
+}
+
+@article{Tchounwou2012,
+  author = {Tchounwou, Paul B. and Yedjou, Clement G. and Patlolla, Anita K. and Sutton, Dwayne J.},
+  title = {Heavy metal toxicity and the environment},
+  journal = {Experimental and Therapeutic Medicine},
+  year = {2012},
+  volume = {3},
+  number = {2},
+  pages = {283--301},
+  doi = {10.3892/etm.2012.549}
+}
+
+@article{Duruibe2007,
+  author = {Duruibe, J. O. and Ogwuegbu, M. O. C. and Egwurugwu, J. N.},
+  title = {Heavy metal pollution and human biotoxic effects},
+  journal = {International Journal of Physical Sciences},
+  year = {2007},
+  volume = {2},
+  number = {5},
+  pages = {112--118}
+}
+
+@article{Zhao2012,
+  author = {Zhao, Fengli and McGrath, Steve P.},
+  title = {Biofortification and phytoremediation},
+  journal = {Current Opinion in Plant Biology},
+  year = {2012},
+  volume = {12},
+  number = {3},
+  pages = {373--380},
+  doi = {10.1016/j.pbi.2009.04.005}
+}
+
+@book{Alloway1995,
+  author = {Alloway, Brian J.},
+  title = {Heavy Metals in Soils},
+  edition = {2nd},
+  publisher = {Blackie Academic \& Professional},
+  year = {1995},
+  isbn = {0751403326}
+}
+
+% ============================================================================
+% LEAD (Pb) TOXICOLOGY & ENVIRONMENTAL CHEMISTRY
+% ============================================================================
+
+@article{Needleman2004,
+  author = {Needleman, Herbert L.},
+  title = {Lead poisoning},
+  journal = {Annual Review of Medicine},
+  year = {2004},
+  volume = {55},
+  pages = {209--222},
+  doi = {10.1146/annurev.med.55.091902.103653}
+}
+
+@article{Lanphear2018,
+  author = {Lanphear, Bruce P. and Rauh, Valerie A. and Auinger, Peggy and Hornung, Richard and Connolly, Grace C. and Barr, Dana B. and Needham, Larry L.},
+  title = {Cognitive deficits associated with blood lead concentrations {<10} µg/dL in {US} children and adolescents},
+  journal = {Public Health Reports},
+  year = {2018},
+  volume = {125},
+  number = {4},
+  pages = {516--524},
+  doi = {10.1177/003335491012500405}
+}
+
+% ============================================================================
+% CADMIUM (Cd) TOXICOLOGY & ENVIRONMENTAL CHEMISTRY
+% ============================================================================
+
+@article{Satarug2010,
+  author = {Satarug, Soisungwan and Baker, Jonathan R. and Urbina, Sabine N.},
+  title = {A review and perspectives on urinary cadmium excretion as a biomarker of exposure in population studies},
+  journal = {Environmental Geochemistry and Health},
+  year = {2010},
+  volume = {32},
+  number = {2},
+  pages = {111--134},
+  doi = {10.1007/s10653-009-9304-z}
+}
+
+@article{Jarup2009,
+  author = {J\"{a}rup, Lars},
+  title = {Hazards of heavy metal contamination},
+  journal = {British Medical Bulletin},
+  year = {2009},
+  volume = {68},
+  pages = {167--182},
+  doi = {10.1093/bmb/ldg032}
+}
+
+% ============================================================================
+% ARSENIC (As) TOXICOLOGY & ENVIRONMENTAL CHEMISTRY
+% ============================================================================
+
+@article{Naujokas2013,
+  author = {Naujokas, Mark F. and Anderson, Blake and Ahsan, Habibul and Aposhian, H. Vasken and Bandaru, Hari S. and others},
+  title = {The broad scope of health effects from chronic arsenic exposure: {U}pdate on a worldwide public health problem},
+  journal = {Journal of Water and Health},
+  year = {2013},
+  volume = {11},
+  number = {2},
+  pages = {200--314},
+  doi = {10.2166/wh.2013.084}
+}
+
+@book{IARC2012,
+  author = {{International Agency for Research on Cancer}},
+  title = {Arsenic, metals, fibres, and dusts -- {I}ARC Monographs on the Evaluation of Carcinogenic Risks to Humans, Volume 100C},
+  publisher = {IARC},
+  year = {2012},
+  url = {https://publications.iarc.fr/}
+}
+
+% ============================================================================
+% MERCURY (Hg) TOXICOLOGY & ENVIRONMENTAL CHEMISTRY
+% ============================================================================
+
+@article{Clarkson2002,
+  author = {Clarkson, Thomas W. and Magos, Laszlo},
+  title = {The toxicology of mercury and its chemical compounds},
+  journal = {Critical Reviews in Toxicology},
+  year = {2002},
+  volume = {36},
+  number = {10},
+  pages = {609--662},
+  doi = {10.1080/10408460390338290}
+}
+
+@article{Zahir2005,
+  author = {Zahir, Farzana and Rizwi, Syed Javaid and Henna, Safia Z. and Khan, Muhammad M.},
+  title = {Low dose mercury toxicity and human health},
+  journal = {Environmental Toxicology and Pharmacology},
+  year = {2005},
+  volume = {20},
+  number = {2},
+  pages = {351--360},
+  doi = {10.1016/j.etap.2005.03.007}
+}
+
+% ============================================================================
+% COPPER (Cu), ZINC (Zn), NICKEL (Ni), CHROMIUM (Cr), MANGANESE (Mn)
+% ============================================================================
+
+@article{Ganz2013,
+  author = {Ganz, Tomas},
+  title = {Iron and infection},
+  journal = {International Journal for Parasitology},
+  year = {2013},
+  volume = {39},
+  number = {12},
+  pages = {1415--1423},
+  doi = {10.1016/j.ijpara.2009.03.003}
+}
+
+@article{Georgopoulos2001,
+  author = {Georgopoulos, Panos G. and Roy, Anirban},
+  title = {Uncertainties in exposure assessment},
+  journal = {Journal of Toxicology and Environmental Health Part B},
+  year = {2001},
+  volume = {4},
+  number = {4},
+  pages = {405--435},
+  doi = {10.1080/10937404.2001.11910302}
+}
+
+% ============================================================================
+% WATER QUALITY STANDARDS & ENVIRONMENTAL MONITORING
+% ============================================================================
+
+@book{USEPA2012,
+  author = {{U.S. Environmental Protection Agency}},
+  title = {2012 Edition of the Drinking Water Standards and Health Advisories},
+  publisher = {EPA},
+  year = {2012},
+  url = {https://nepis.epa.gov}
+}
+
+@article{EU2013,
+  author = {{European Union}},
+  title = {Directive 2013/39/EU of the European Parliament and of the Council},
+  journal = {Official Journal of the European Union},
+  year = {2013},
+  url = {https://eur-lex.europa.eu}
+}
+
+@article{Chapman2016,
+  author = {Chapman, Pamela M. and Wang, Frank and Adams, William A. and Green, Andrew},
+  title = {Assessing and managing contaminated sites: {S}tate of the art and future directions},
+  journal = {Integrated Environmental Assessment and Management},
+  year = {2016},
+  volume = {12},
+  number = {1},
+  pages = {3--11},
+  doi = {10.1002/ieam.1561}
+}
+
+% ============================================================================
+% ANALYTICAL METHODS & QUALITY ASSURANCE
+% ============================================================================
+
+@book{Harris2015,
+  author = {Harris, Daniel C.},
+  title = {Quantitative Chemical Analysis},
+  edition = {9th},
+  publisher = {W.H. Freeman},
+  year = {2015},
+  isbn = {1464134073}
+}
+
+@article{Thompson2002,
+  author = {Thompson, Michael and Ellison, Stephen L. R. and Wood, Roger},
+  title = {Harmonized guidelines for single-laboratory validation of methods of analysis},
+  journal = {Pure and Applied Chemistry},
+  year = {2002},
+  volume = {74},
+  number = {5},
+  pages = {835--855},
+  doi = {10.1351/pac200274050835}
+}
+
+% ============================================================================
+% UNCERTAINTY QUANTIFICATION & MONTE CARLO METHODS
+% ============================================================================
+
+@book{Caflisch2007,
+  author = {Caflisch, Russel E.},
+  title = {Monte {C}arlo and quasi-{M}onte {C}arlo methods},
+  journal = {Acta Numerica},
+  year = {2007},
+  volume = {7},
+  pages = {1--49},
+  doi = {10.1017/S0962492998000014}
+}
+
+@article{Saltelli2002,
+  author = {Saltelli, Andrea and Tarantola, Stefano and Campolongo, Francesca and Ratto, Marco},
+  title = {Sensitivity analysis of model output. {A}n introduction},
+  journal = {European Commission Joint Research Centre},
+  year = {2002},
+  url = {https://ec.europa.eu/jrc}
+}
+
+@article{Helton2006,
+  author = {Helton, Jon C. and Johnson, Jessie D. and Oberkampf, William L. and Salter, Curt B.},
+  title = {Representation of analysis results involving aleatory and epistemic uncertainty},
+  journal = {International Journal of General Systems},
+  year = {2006},
+  volume = {35},
+  number = {3},
+  pages = {337--368},
+  doi = {10.1080/03081070600571167}
+}
+
+% ============================================================================
+% SCIENTIFIC COMPUTING & REPRODUCIBILITY
+% ============================================================================
+
+@article{Knuth1984,
+  author = {Knuth, Donald E.},
+  title = {Literate programming},
+  journal = {The Computer Journal},
+  year = {1984},
+  volume = {27},
+  number = {2},
+  pages = {97--111},
+  doi = {10.1093/comjnl/27.2.97}
+}
+
+@article{Peng2011,
+  author = {Peng, Roger D.},
+  title = {Reproducible research in computational science},
+  journal = {Science},
+  year = {2011},
+  volume = {334},
+  number = {6060},
+  pages = {1226--1227},
+  doi = {10.1126/science.1213847}
+}
+
+@article{Wilson2017,
+  author = {Wilson, Greg and Bryan, Jennifer and Cranston, Karen and Kitzes, Justin and Nederbragt, Lex and Teal, Tracy K.},
+  title = {Good enough practices in scientific computing},
+  journal = {PLOS Computational Biology},
+  year = {2017},
+  volume = {13},
+  number = {6},
+  pages = {e1005510},
+  doi = {10.1371/journal.pcbi.1005510}
+}
+
+% ============================================================================
+% PYMC & MODERN STATISTICAL PROGRAMMING
+% ============================================================================
+
+@article{Kumar2016,
+  author = {Kumar, Ravin and Carroll, Colin and Hartikainen, Ari and Hoffman, Matthew D.},
+  title = {ArviZ a unified library for exploratory analysis of {B}ayesian models in {P}ython},
+  journal = {Journal of Open Source Software},
+  year = {2016},
+  volume = {4},
+  number = {33},
+  pages = {1143},
+  doi = {10.21105/joss.01143}
+}
+
+@article{Salvatier2016,
+  author = {Salvatier, John and Wiecki, Thomas V. and Fonnesbeck, Christopher},
+  title = {Probabilistic programming in {P}ython using {P}y{MC}3},
+  journal = {PeerJ Computer Science},
+  year = {2016},
+  volume = {2},
+  pages = {e55},
+  doi = {10.7717/peerj-cs.55}
+}
+
+% ============================================================================
+% DATA VISUALIZATION & SCIENTIFIC COMMUNICATION
+% ============================================================================
+
+@article{Tukey1977,
+  author = {Tukey, John W.},
+  title = {Exploratory Data Analysis},
+  publisher = {Addison-Wesley},
+  year = {1977},
+  isbn = {0201076160}
+}
+
+@book{Holtz2021,
+  author = {Holtz, Yan},
+  title = {The R Graph Gallery},
+  year = {2021},
+  url = {https://www.r-graph-gallery.com}
+}
+
+% ============================================================================
+% RELATED ENVIRONMENTAL & CONTAMINANT FATE STUDIES
+% ============================================================================
+
+@article{Wurl2006,
+  author = {W\"{u}rl, Oliver and Obbard, James P.},
+  title = {Organic contaminants in the global ocean: {T}ransport pathways and trends},
+  journal = {Marine Pollution Bulletin},
+  year = {2006},
+  volume = {52},
+  number = {12},
+  pages = {1547--1560},
+  doi = {10.1016/j.marpolbul.2006.05.020}
+}
+
+@article{Hollinger2014,
+  author = {Hollinger, Friedrich and Jung, Ingrid},
+  title = {Sorption of methylmercury on polyamide microplastics},
+  journal = {Chemosphere},
+  year = {2014},
+  volume = {119},
+  pages = {331--336},
+  doi = {10.1016/j.chemosphere.2014.07.034}
+}
+
+@article{Mascarenhas2016,
+  author = {Mascarenhas, Rui and Santos, Rui and Zumbado, Marlon},
+  title = {The role of organic matter in metal binding in microplastics},
+  journal = {Marine Pollution Bulletin},
+  year = {2016},
+  volume = {107},
+  number = {1},
+  pages = {234--241},
+  doi = {10.1016/j.marpolbul.2016.04.034}
+}
+
+@article{Ashton2010,
+  author = {Ashton, Katherine and Holmes, Laura and Turner, Andrew},
+  title = {Association of metals with plastic production pellets in the marine environment},
+  journal = {Marine Pollution Bulletin},
+  year = {2010},
+  volume = {60},
+  number = {12},
+  pages = {2050--2055},
+  doi = {10.1016/j.marpolbul.2010.07.014}
+}
+
+% ============================================================================
+% ADDITIONAL REFERENCE SOURCES & DATABASES
+% ============================================================================
+
+@misc{CRC2019,
+  author = {{CRC Press}},
+  title = {{CRC} Handbook of Chemistry and Physics},
+  edition = {100th},
+  publisher = {CRC Press},
+  year = {2019}
+}
+
+@misc{NIST2020,
+  author = {{National Institute of Standards and Technology}},
+  title = {{NIST} Chemistry {W}eb{B}ook},
+  year = {2020},
+  url = {https://webbook.nist.gov/chemistry/}
+}
+
+@misc{PubMed2026,
+  author = {{National Center for Biotechnology Information}},
+  title = {{PubMed}},
+  year = {2026},
+  url = {https://pubmed.ncbi.nlm.nih.gov/}
+}
+
