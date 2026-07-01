@@ -1,0 +1,51 @@
+Source_ID,Author-year,DOI,n_rows,metals,polymers,min_qm_ug_g,max_qm_ug_g
+QMS001,"(Chen et al., 2025)",10.1016/j.envpol.2024.125538,6,Cu (II),PBAT,1000.0,8990.0
+QMS002,"(Dai et al., 2025)",10.1016/j.envres.2025.121169,10,Cu (II),PA; PLA,88.0,2318.0
+QMS003,"(Dong et al., 2020)",10.1039/d0em00324g,7,As (III),PS,2840.0,11830.0
+QMS004,"(Gao et al., 2021)",10.1016/j.marpolbul.2021.112480,8,Cd (II); Cu (II),PS; PVC,715.99,3903.1
+QMS005,"(Gao et al., 2023)",10.1016/j.envpol.2023.122621,5,Hg (II),PA; PE; PET; PLA; PVC,7.6,11.8
+QMS006,"(Guo et al., 2020)",10.1016/j.ecoenv.2019.110118,4,Cd (II),PE; PP; PS; PVC,36.1,53.48
+QMS007,"(He et al., 2022)",10.1016/j.jece.2022.109040,3,Mn (II),PS,463.8,970.7
+QMS008,"(Hu et al., 2024)",10.1007/s11356-024-33131-1,4,Cu (II),PA; PLA,951.0,1415.0
+QMS009,"(Hu et al., 2024b)",10.1021/acs.langmuir.4c03841,4,Cr (VI),PA; PLA,941.0,2192.0
+QMS010,"(Huang et al., 2023)",10.1016/j.cej.2023.141838,4,Pb (II),PLA; PS,894.0,1509.0
+QMS011,"(Huang et al., 2024)",10.1016/j.envpol.2023.123061,4,Cu (II),PLA; PS,365.0,7132.0
+QMS012,"(Jiang et al., 2022)",10.1016/j.jcis.2022.04.068,6,Pb (II),PE; PP,239.9,2513.2
+QMS013,"(Jiang et al., 2025)",10.3390/w17010074,2,As (III); Cd (II),PBS,2606.0,2997.0
+QMS014,"(Li et al., 2019)",10.1016/j.watres.2019.03.069,4,Cd (II),Mix; PA; PE; PP,199.2,2523.0
+QMS015,"(Li et al., 2021)",10.1016/j.scitotenv.2021.148940,5,Cd (II),PA; PE; PS,57.48,2130.0
+QMS016,"(Li et al., 2024)",10.1016/j.chemosphere.2023.141067,6,Hg (II),PE; PLA; PS,0.69,27.51
+QMS017,(Li_Wang 2022),10.1016/j.scitotenv.2022.155251,3,Pb (II),PBS,64.13,647.09
+QMS018,(Li_Zhang 2022),10.1016/j.chemosphere.2022.134865,15,Cr (VI),PA; PE; PS,69.03,797.61
+QMS019,(Li_li 2022),10.1016/j.chemosphere.2022.135697,7,Cr(VI),PS,704.0,4901.0
+QMS020,(Li_zu 2022),10.1016/j.jece.2022.107379,4,Cd (II); Pb (II),PP; PS,314.0,775.0
+QMS021,"(Lin et al., 2021)",10.1016/j.ecoenv.2020.111451,3,Pb (II),PVC,650.7,943.2
+QMS022,"(Lin et al., 2022)",10.1016/j.watres.2022.119144,9,Cu (II); Ni (II); Zn (II),PS,9.228,48.217
+QMS023,(Liu_Huang 2022),10.1016/j.jhazmat.2022.128643,7,Pb (II),PE,4160.0,17730.0
+QMS024,(Liu_Zhang 2022),10.1016/j.jece.2022.108615,4,Pb (II),PE; PLA,536.0,977.0
+QMS025,"(Mao et al., 2020)",10.1016/j.jhazmat.2020.122515,35,Cd (II); Cu (II); Ni (II); Pb (II); Zn (II),PS,78.1,312.0
+QMS026,"(Muthuraja et al., 2024)",10.1016/j.chemosphere.2024.143843,12,Cu (II); Pb (II),PP; PS,1805.0,10979.0
+QMS027,"(Nguyen et al., 2022)",10.1016/j.chemosphere.2022.135276,3,Pb (II),PE,30.2512,78.73599999999999
+QMS028,"(Qi et al., 2021)",10.1016/j.jhazmat.2021.125115,3,Pb (II),PS,613.1,1239.72
+QMS029,"(Qiongjie et al., 2022)",10.1016/j.jhazmat.2021.127340,30,Cu (II); Pb (II),PS,7.8111,43.8846
+QMS030,"(Qiu et al., 2022)",10.1016/j.scitotenv.2022.157802,12,Hg (II),PA; PE; PET; PP; PS; PVC,4.9,244.6
+QMS031,"(Saravanakumar et al., 2024)",10.1002/tqem.22355,1,Pb (II),PE,3690.0,3690.0
+QMS032,"(Sathyamoorthy et al., 2022)",10.1002/wer.10809,1,Cu (II),PE,1230.0,1230.0
+QMS033,"(Sun et al., 2022)",10.1016/j.cej.2021.132306,2,Cu (II),PLA,151.802,1045.67
+QMS034,"(Sun et al., 2023)",10.1016/j.cej.2023.142714,2,Cu (II),PBAT,140.547,172.065
+QMS035,"(Tang et al., 2022)",10.1016/j.gr.2022.06.017,3,Cd (II); Cu (II); Pb (II),PA,136.0,767.0
+QMS036,(Tang_Lin 2020),10.1016/j.jhazmat.2019.121960,2,Pb (II),nylon,463.7,1031.5
+QMS037,"(Wang et al., 2019)",10.1016/j.chemosphere.2019.06.196,1,Cd (II),HDPE,30.5,30.5
+QMS038,"(Wang et al., 2020)",10.1016/j.jes.2019.07.006,3,Cu (II); Zn (II),PET,211.03,335.48
+QMS039,"(Wang et al., 2021)",10.1016/j.cej.2020.126412,8,Cu (II),PE,31.2,412.0
+QMS040,"(Wang et al., 2023)",10.1016/j.scitotenv.2023.163466,8,Pb (II),PVC,1910.0,4570.0
+QMS041,(Wang_Qui 2022),10.1016/j.scitotenv.2022.157109,12,Cd (II),PET; PS,154.0,392.0
+QMS042,(Wang_Wang 2022),10.1016/j.scitotenv.2022.155026,3,Pb (II),PVC,4150.0,4930.0
+QMS043,(Wang_wang 2020),10.1016/j.cej.2019.123808,2,Cu (II),PE,237.5,762.2
+QMS044,"(Xue et al., 2021)",10.1016/j.jhazmat.2020.124835,4,Cu (II),TPU,454.0,613.0
+QMS045,"(Yang et al., 2019)",10.1007/s11356-019-05643-8,7,Cu (II),PA; PET; PMMA; PS; PVC,6.289999999999999,432.0
+QMS046,"(Yu et al., 2021)",10.1016/j.eti.2021.102036,3,Cd (II),PS,655.6999999999999,926.4
+QMS047,"(Yu et al., 2023)",10.1016/j.envres.2022.114532,5,Pb (II),PLA,889.54,2089.02
+QMS048,"(Zhao et al., 2022)",10.1016/j.chemosphere.2022.134789,3,Cd (II),PBT,3880.0,10100.0
+QMS049,(Zhou_Sun 2022),10.1016/j.chemosphere.2021.132794,6,Cr (VI); Cu (II),PS; PVC,2520.0,8840.0
+QMS050,(Zhou_chen 2022),10.1016/j.scitotenv.2022.155142,11,Cu (II),PE; PP,1.05,11.01

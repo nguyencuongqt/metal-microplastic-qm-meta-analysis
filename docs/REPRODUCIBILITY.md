@@ -42,10 +42,11 @@ The complete pipeline includes model fitting and sensitivity analyses. These ste
 
 ## Included Data
 
-- `data_raw/Qm data.xlsx`: original compiled source workbook.
+- `data_raw/Qm data.xlsx`: compiled source workbook standardized with `Source_ID`, DOI, publication year, title, journal, and author metadata for the 50 source studies.
 - `data_processed/00_raw_data_snapshot.csv`: frozen raw-data snapshot.
 - `data_processed/02_cleaned_data.csv`: cleaned dataset used by the core analyses.
 - `data_processed/03_enriched_data.csv`: cleaned dataset with metal descriptors and derived fields.
+- `results/data_qc/qm_data_standardization_audit.csv`: source-level audit confirming row counts and DOI coverage after standardization.
 
 ## Included Outputs
 
@@ -61,3 +62,4 @@ On 2026-07-01, the following checks passed locally:
 - Data policy validator.
 - Pipeline dry run over all nine pipeline steps.
 - Smoke-test functions in `tests/test_reproducibility_smoke.py`.
+- Qm source standardization audit: 316 rows, 50 sources, 50 unique DOI values, and zero missing DOI values.

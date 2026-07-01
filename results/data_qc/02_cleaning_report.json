@@ -3,26 +3,27 @@
   "final_rows": 316,
   "rows_removed": 0,
   "removal_rate": 0.0,
-  "initial_columns": 15,
-  "final_columns": 25,
-  "columns_removed": 6,
+  "initial_columns": 23,
+  "final_columns": 34,
+  "columns_removed": 5,
   "columns_added": 16,
   "missing_data": {
     "initial_missing_cells": 834,
-    "initial_missing_pct": 17.594936708860757,
+    "initial_missing_pct": 11.47495872317006,
     "final_missing_cells": 734,
-    "final_missing_pct": 9.291139240506329,
+    "final_missing_pct": 6.831720029784065,
     "reduction": 100
   },
   "data_types": {
     "initial": {
-      "str": 10,
-      "float64": 5
+      "str": 16,
+      "float64": 5,
+      "int64": 2
     },
     "final": {
-      "str": 8,
+      "str": 15,
       "float64": 7,
-      "int64": 4,
+      "int64": 6,
       "int32": 3,
       "int8": 1,
       "bool": 1,

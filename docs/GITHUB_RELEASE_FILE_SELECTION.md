@@ -28,6 +28,7 @@ Data:
 Scripts:
 
 - `scripts/utils.py`
+- `scripts/00_standardize_qm_data.py`
 - `scripts/01_data_loading.py`
 - `scripts/02_data_cleaning.py`
 - `scripts/03_descriptor_enrichment.py`
@@ -44,6 +45,7 @@ Compact outputs:
 - `results/data_qc/01_data_loading_metadata.json`
 - `results/data_qc/02_cleaning_report.json`
 - `results/data_qc/03_enrichment_validation.json`
+- `results/data_qc/qm_data_standardization_audit.csv`
 - `results/eda/04_eda_results.json`
 - `results/diagnostics/06_diagnostics_results.json`
 - `results/diagnostics/06_variance_partition_summary.csv`

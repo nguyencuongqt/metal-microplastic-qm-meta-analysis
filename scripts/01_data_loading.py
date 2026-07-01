@@ -148,9 +148,9 @@ def identify_key_variables(df: pd.DataFrame, logger) -> dict:
         'Temperature': ['temp', 'temperature'],
         'SA': ['sa', 'surface area', 'surface_area', 'area'],
         'Aging': ['aging', 'age', 'weathering', 'treatment'],
-        'Study': ['study', 'reference', 'author', 'paper', 'source'],
+        'Study': ['source_id', 'study_id', 'study', 'reference', 'author', 'paper', 'source'],
         'DOI': ['doi', 'doi number'],
-        'Year': ['year', 'publication year'],
+        'Year': ['publication_year', 'publication year', 'year'],
     }
     
     variable_mapping = {}

@@ -7,6 +7,7 @@ The reviewer-facing package is designed to make the analysis auditable without i
 ## Study Scope
 
 - Evidence base: 316 equilibrium isotherm experiments compiled from 50 studies.
+- Source traceability: each raw observation is linked to a stable `Source_ID`, DOI, publication year, title, journal, and author metadata from the curated 50-study source inventory.
 - Response: Langmuir maximum adsorption capacity, `Qm`, harmonized as micrograms per gram (`ug/g`) in the cleaned analysis data.
 - Predictors: metal identity, polymer identity, aging/weathering status, temperature, pH, surface area, and selected metal descriptors.
 - Main analysis: hierarchical Bayesian mixed-effects models with study-level random effects.
@@ -89,6 +90,7 @@ Key rules:
 ## Key Entry Points
 
 - `scripts/01_data_loading.py`: reads the raw workbook and freezes a raw-data snapshot.
+- `scripts/00_standardize_qm_data.py`: attaches DOI/source metadata to the raw Qm workbook and writes a source-level audit.
 - `scripts/02_data_cleaning.py`: applies cleaning, quality flags, and policy-compliant imputation.
 - `scripts/03_descriptor_enrichment.py`: adds metal descriptors and derived variables.
 - `scripts/05_model_fitting.py`: fits the primary Bayesian hierarchical models.

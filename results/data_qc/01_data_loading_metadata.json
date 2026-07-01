@@ -2,10 +2,19 @@
   "inspection": {
     "shape": [
       316,
-      15
+      23
     ],
     "columns": [
+      "Row_ID",
+      "Source_ID",
       "Author-year",
+      "DOI",
+      "Publication_year",
+      "First_author",
+      "Reference_title",
+      "Journal",
+      "All_authors",
+      "RIS_index",
       "AgS",
       "ReT",
       "SA (m2/g)",
@@ -15,14 +24,22 @@
       "pH",
       "rpm",
       "Adc",
-      "Qm (\u00b5g/g)",
+      "Qm (ug/g)",
       "Aged condition",
       "Solution- added agent",
-      "Note",
-      "Unnamed: 14"
+      "Note"
     ],
     "dtypes": {
+      "Row_ID": "str",
+      "Source_ID": "str",
       "Author-year": "str",
+      "DOI": "str",
+      "Publication_year": "int64",
+      "First_author": "str",
+      "Reference_title": "str",
+      "Journal": "str",
+      "All_authors": "str",
+      "RIS_index": "int64",
       "AgS": "str",
       "ReT": "str",
       "SA (m2/g)": "object",
@@ -32,14 +49,22 @@
       "pH": "float64",
       "rpm": "float64",
       "Adc": "str",
-      "Qm (\u00b5g/g)": "float64",
+      "Qm (ug/g)": "float64",
       "Aged condition": "str",
       "Solution- added agent": "str",
-      "Note": "str",
-      "Unnamed: 14": "str"
+      "Note": "str"
     },
     "missing_counts": {
+      "Row_ID": 0,
+      "Source_ID": 0,
       "Author-year": 0,
+      "DOI": 0,
+      "Publication_year": 0,
+      "First_author": 0,
+      "Reference_title": 0,
+      "Journal": 0,
+      "All_authors": 0,
+      "RIS_index": 0,
       "AgS": 0,
       "ReT": 0,
       "SA (m2/g)": 191,
@@ -49,14 +74,22 @@
       "pH": 138,
       "rpm": 65,
       "Adc": 0,
-      "Qm (\u00b5g/g)": 0,
+      "Qm (ug/g)": 0,
       "Aged condition": 172,
       "Solution- added agent": 233,
-      "Note": 159,
-      "Unnamed: 14": 305
+      "Note": 159
     },
     "missing_percentages": {
+      "Row_ID": 0.0,
+      "Source_ID": 0.0,
       "Author-year": 0.0,
+      "DOI": 0.0,
+      "Publication_year": 0.0,
+      "First_author": 0.0,
+      "Reference_title": 0.0,
+      "Journal": 0.0,
+      "All_authors": 0.0,
+      "RIS_index": 0.0,
       "AgS": 0.0,
       "ReT": 0.0,
       "SA (m2/g)": 60.44303797468354,
@@ -66,21 +99,29 @@
       "pH": 43.67088607594937,
       "rpm": 20.569620253164558,
       "Adc": 0.0,
-      "Qm (\u00b5g/g)": 0.0,
+      "Qm (ug/g)": 0.0,
       "Aged condition": 54.43037974683544,
       "Solution- added agent": 73.73417721518987,
-      "Note": 50.31645569620253,
-      "Unnamed: 14": 96.51898734177216
+      "Note": 50.31645569620253
     },
     "numeric_columns": [
+      "Publication_year",
+      "RIS_index",
       "AIC (mg/L)",
       "Temp",
       "pH",
       "rpm",
-      "Qm (\u00b5g/g)"
+      "Qm (ug/g)"
     ],
     "categorical_columns": [
+      "Row_ID",
+      "Source_ID",
       "Author-year",
+      "DOI",
+      "First_author",
+      "Reference_title",
+      "Journal",
+      "All_authors",
       "AgS",
       "ReT",
       "SA (m2/g)",
@@ -88,60 +129,61 @@
       "Adc",
       "Aged condition",
       "Solution- added agent",
-      "Note",
-      "Unnamed: 14"
+      "Note"
     ]
   },
   "variable_mapping": {
-    "Qm": "Qm (\u00b5g/g)",
+    "Qm": "Qm (ug/g)",
     "Metal": "Metal",
     "Polymer": "ReT",
     "pH": "pH",
     "Temperature": "Temp",
     "SA": "SA (m2/g)",
     "Aging": "Aged condition",
-    "Study": "Author-year",
-    "DOI": null,
-    "Year": "Author-year"
+    "Study": "Source_ID",
+    "DOI": "DOI",
+    "Year": "Publication_year"
   },
   "qm_numeric_audit": {
-    "qm_column": "Qm (\u00b5g/g)",
-    "dtype_before": "object",
+    "qm_column": "Qm (ug/g)",
+    "dtype_before": "float64",
     "dtype_after": "float64",
     "non_empty_values": 316,
     "numeric_values": 316,
     "malformed_count": 0,
     "malformed_examples": [],
-    "fix_applied": true
+    "fix_applied": false
   },
   "quality_report": {
     "total_rows": 316,
-    "total_columns": 15,
+    "total_columns": 23,
     "complete_rows": 0,
     "completeness_rate": 0.0,
-    "variables_found": 9,
-    "variables_missing": 1,
+    "variables_found": 10,
+    "variables_missing": 0,
     "core_required_columns": [
-      "Qm (\u00b5g/g)",
+      "Qm (ug/g)",
       "Metal",
       "ReT"
     ],
     "core_complete_rows": 316,
     "core_completeness_rate": 100.0,
     "qm_unit_report": {
-      "qm_column": "Qm (\u00b5g/g)",
+      "qm_column": "Qm (ug/g)",
       "qm_related_columns": [
-        "Qm (\u00b5g/g)"
+        "Qm (ug/g)"
       ],
       "units_found_in_headers": [
-        "\u00b5g/g"
+        "ug/g"
       ],
       "unit_consistency_flag": "consistent",
       "recognized_tokens": [
         "mg/g",
         "ug/g",
-        "\u00b5g/g",
-        "\u03bcg/g"
+        "\\u00b5g/g",
+        "\\u03bcg/g",
+        "\\u00c2\\u00b5g/g",
+        "\\u00ce\\u00bcg/g"
       ]
     },
     "duplicates": 0,
