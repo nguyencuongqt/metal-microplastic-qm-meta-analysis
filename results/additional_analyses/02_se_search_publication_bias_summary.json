@@ -1,0 +1,46 @@
+{
+  "random_seed": 42,
+  "source_level_langmuir_se_found": false,
+  "source_level_langmuir_K_found": false,
+  "row_level_se_columns": [],
+  "row_level_k_columns": [],
+  "se_search_conclusion": "No row-level Langmuir Qm standard errors were found in the source workbook, processed data, model artifacts, or result tables. Weighted measurement-error meta-analysis is therefore not identifiable from the available data; publication-bias diagnostics use a study-level proxy precision.",
+  "k_search_conclusion": "No row-level Langmuir K/KL values were found in the repository tables. Full-isotherm EMVP must use K sensitivity ranges unless authors provide original K values.",
+  "egger_overall_proxy": {
+    "n_units": 47,
+    "intercept": 0.4369551333290476,
+    "intercept_p": 0.9033009701787527,
+    "slope": 0.003903395604193588,
+    "r2": 1.6886181445352477e-06,
+    "precision_proxy": "within-study or within-metal-study SE of mean ln(Qm): sd(lnQm)/sqrt(n), restricted to aggregation units with n>=2"
+  },
+  "egger_by_metal_proxy": [
+    {
+      "n_units": 9,
+      "intercept": -0.33125181659085934,
+      "intercept_p": 0.94352959077976,
+      "slope": -0.38135362441611775,
+      "r2": 0.38824170976852335,
+      "precision_proxy": "within-study or within-metal-study SE of mean ln(Qm): sd(lnQm)/sqrt(n), restricted to aggregation units with n>=2",
+      "Metal_raw": "Cd (II)"
+    },
+    {
+      "n_units": 17,
+      "intercept": 2.606442052652624,
+      "intercept_p": 0.5651364985307734,
+      "slope": -0.5147569891854062,
+      "r2": 0.08603502912275829,
+      "precision_proxy": "within-study or within-metal-study SE of mean ln(Qm): sd(lnQm)/sqrt(n), restricted to aggregation units with n>=2",
+      "Metal_raw": "Cu (II)"
+    },
+    {
+      "n_units": 16,
+      "intercept": 5.843705451250275,
+      "intercept_p": 0.44228657496658785,
+      "slope": -0.6284664073096274,
+      "r2": 0.0590475949409186,
+      "precision_proxy": "within-study or within-metal-study SE of mean ln(Qm): sd(lnQm)/sqrt(n), restricted to aggregation units with n>=2",
+      "Metal_raw": "Pb (II)"
+    }
+  ]
+}

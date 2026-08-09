@@ -1,6 +1,6 @@
 # Quantitative Hierarchical Meta-Analysis of Heavy Metal Adsorption onto Microplastics
 
-This repository contains the data, analysis scripts, model summaries, result tables, and publication figures supporting a quantitative hierarchical meta-analysis of Langmuir maximum adsorption capacity (`Qm`) for heavy metal adsorption onto microplastics.
+This repository contains the data, analysis scripts, model summaries, and result tables supporting a quantitative hierarchical meta-analysis of Langmuir maximum adsorption capacity (`Qm`) for heavy metal adsorption onto microplastics.
 
 The reviewer-facing package is designed to make the analysis auditable without including local caches, virtual environments, manuscript lock files, or large regenerated intermediates.
 
@@ -21,8 +21,7 @@ The reviewer-facing package is designed to make the analysis auditable without i
 |-- data_raw/                       Original compiled source workbook
 |-- data_processed/                 Snapshot, cleaned, and enriched analysis data
 |-- docs/                           Data policy and reproducibility documentation
-|-- figures/                        Final manuscript figures
-|-- manuscript/references/          Source-study reference inventories
+|-- manuscript/references/          Source-study reference inventory
 |-- models/                         Compact model summary JSON files
 |-- results/                        Compact result summaries
 |-- scripts/                        Final analysis pipeline scripts
@@ -96,8 +95,14 @@ Key rules:
 - `scripts/05_model_fitting.py`: fits the primary Bayesian hierarchical models.
 - `scripts/06_model_diagnostics.py`: computes convergence and posterior predictive diagnostics.
 - `scripts/07_sensitivity_analysis.py`: performs leave-one-study-out, prior, perturbation, and bootstrap checks.
-- `scripts/08_environmental_module.py`: runs EMVP scenario calculations.
-The repository intentionally presents the final analysis package only. Internal revision-history folders, local manuscript drafts, and exploratory reviewer-response work directories are excluded to keep the public record concise.
+- `scripts/08_environmental_context.py`: regenerates the current total-water-pool EMVP summary and Figure 3.
+- `scripts/additional_analyses/`: posterior diagnostics, publication-bias proxy analysis, and missingness sensitivity used in the current manuscript.
+
+## Current Environmental Context
+
+The current manuscript uses `R_water = EMVP / C_water`, where `C_water` is the mean total waterborne metal concentration for Asian freshwaters reported by Zhou et al. (2020). The current values are in `results/environmental/08_rwater_asia_summary.csv`. Older regulatory-benchmark and dissolved-phase comparison outputs are not part of this release.
+
+The repository intentionally contains only the data, code, configuration, compact numerical outputs, and documentation required to inspect or rerun the analysis. Manuscripts, Supporting Information files, figures, cover letters, working drafts, and revision-history documents are excluded.
 
 ## Citation
 

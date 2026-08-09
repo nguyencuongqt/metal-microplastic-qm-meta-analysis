@@ -1,0 +1,7 @@
+Study_ID,Study_ID_numeric,Metal_raw,ReT,AgS,Qm,log_Qm,row_index,pareto_k,pareto_class
+"(Li et al., 2019)",14,Cd (II),Mix,Aged,2523.0,7.833203948641057,3,0.8241357253210846,bad
+"(Yang et al., 2019)",45,Cu (II),PA,Virgin,432.0,6.068425588244111,5,0.7003090138485706,bad
+(Wang_wang 2020),43,Cu (II),PE,Virgin,762.2,6.63620898843976,64,0.7022375583660266,bad
+(Li_Wang 2022),17,Pb (II),PBS,Virgin,64.13,4.160912273160771,119,0.7829811841312545,bad
+"(Sathyamoorthy et al., 2022)",32,Cu (II),PE,Virgin,1230.0,7.114769448366463,202,0.9067069046344792,bad
+"(Saravanakumar et al., 2024)",31,Pb (II),PE,Virgin,3690.0,8.213381737034572,297,0.7984196279327463,bad

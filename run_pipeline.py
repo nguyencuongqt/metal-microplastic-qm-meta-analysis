@@ -2,8 +2,8 @@
 Master Pipeline Script
 ======================
 
-This script runs the entire meta-analysis pipeline from data loading
-to manuscript materials assembly.
+This script runs the public reproducibility pipeline from data loading
+through the current environmental-context analysis.
 
 Execution Order:
 1. Data Loading (01_data_loading.py)
@@ -13,8 +13,7 @@ Execution Order:
 5. Model Fitting (05_model_fitting.py)
 6. Model Diagnostics (06_model_diagnostics.py)
 7. Sensitivity Analysis (07_sensitivity_analysis.py)
-8. Environmental Module (08_environmental_module.py)
-9. Evidence-Based Manuscript Assembly (09_manuscript_materials.py)
+8. Total-water EMVP Context (08_environmental_context.py)
 
 Usage:
     python run_pipeline.py [--start STEP] [--end STEP] [--skip STEPS]
@@ -87,14 +86,8 @@ PIPELINE_STEPS = [
     },
     {
         'id': 8,
-        'name': 'Environmental Module',
-        'script': 'scripts/08_environmental_module.py',
-        'required': False
-    },
-    {
-        'id': 9,
-        'name': 'Manuscript Materials Assembly',
-        'script': 'scripts/09_manuscript_materials.py',
+        'name': 'Total-water EMVP Context',
+        'script': 'scripts/08_environmental_context.py',
         'required': False
     }
 ]
@@ -118,8 +111,8 @@ def parse_arguments():
     parser.add_argument(
         '--end',
         type=int,
-        default=9,
-        help='End at this step (default: 9)'
+        default=8,
+        help='End at this step (default: 8)'
     )
     
     parser.add_argument(

@@ -91,7 +91,9 @@ scripts/**/__pycache__/
 __pycache__/
 
 # Manuscript working files not required for code/data review
+manuscript/submission/
 manuscript/submission_package/
+manuscript/submission_20260809/
 manuscript/legacy_drafts/
 manuscript/generated_materials/
 manuscript/manuscript_blueprint.yaml
@@ -127,6 +129,9 @@ figures/Environmental_*.png
 figures/Sensitivity_*.png
 figures/Figure_*.txt
 figures/PDF/
+
+# Figures are generated locally and are not part of the reviewer repository.
+figures/
 
 # Results (if regenerable)
 # results/*.csv
