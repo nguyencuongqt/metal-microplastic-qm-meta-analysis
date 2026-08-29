@@ -97,7 +97,7 @@ Key rules:
 - `scripts/06_model_diagnostics.py`: computes convergence and posterior predictive diagnostics.
 - `scripts/07_sensitivity_analysis.py`: performs leave-one-study-out, prior, perturbation, and bootstrap checks.
 - `scripts/08_environmental_module.py`: runs EMVP scenario calculations.
-The repository intentionally presents the final analysis package only. Internal revision-history folders, local manuscript drafts, and exploratory reviewer-response work directories are excluded to keep the public record concise.
+This repository contains only the files required to inspect and reproduce the analysis.
 
 ## Citation
 

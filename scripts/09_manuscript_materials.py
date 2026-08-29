@@ -183,7 +183,7 @@ def required_inputs(project_root: Path) -> List[Path]:
 def ensure_layout(output_root: Path) -> Dict[str, Path]:
     layout = {
         "root": output_root,
-        "drafts": output_root / "drafts",
+        "manuscript": output_root / "manuscript_materials",
         "tables": output_root / "tables",
         "captions": output_root / "captions",
         "evidence": output_root / "evidence",
@@ -820,7 +820,7 @@ def build_tables(
     return tables, captions
 
 
-def write_manuscript_skeleton(
+def write_manuscript_outline(
     output_file: Path,
     journal: str,
     workflow_notes: List[str],
@@ -859,7 +859,7 @@ def write_manuscript_skeleton(
 ## Journal Target
 - {journal}
 
-## Title Placeholder
+## Title
 - {MANUAL_FLAG} Provide title after author review.
 
 ## Abstract Skeleton
@@ -884,14 +884,14 @@ def write_manuscript_skeleton(
 - Report EMVP from results/08_emvp_summary_table.csv.
 - If conflicts exist, annotate {MANUAL_FLAG}.
 
-## Discussion Placeholder
+## Discussion
 - Interpret within artifact scope.
 - Do not overclaim causality or out-of-sample generalization.
 
-## Limitations Placeholder
+## Limitations
 - Explicitly state in-sample calibration limitations and missing validations.
 
-## Conclusion Placeholder
+## Conclusion
 - Keep conclusion bounded by validated artifacts.
 
 ## Authoritative Inputs Used
@@ -942,7 +942,7 @@ def write_captions(
         "EDA_03_correlation_matrix": "Figure S7. Exploratory correlation matrix among numeric variables and log(Qm), included in the supplement for descriptive context only.",
         "EDA_03b_binary_indicator_logQm": "Figure S8. Exploratory contrasts between binary indicators and log(Qm), included as supplementary descriptive analysis.",
         "EDA_04_study_variation": "Figure S9. Study-level variation in mean log(Qm), provided as supplementary context for between-study heterogeneity.",
-        "Environmental_01_EMVP_analysis": "Figure S10. Artifact-level EMVP analysis figure used for internal review; the manuscript uses the curated EMVP scenario figure in the main text instead.",
+        "Environmental_01_EMVP_analysis": "Figure S10. Supplementary EMVP analysis figure; the manuscript uses the curated EMVP scenario figure in the main text.",
         "Environmental_02_sensitivity_ci_width": "Figure S11. Width of environmental scenario uncertainty intervals across metals and loading conditions.",
         "Sensitivity_01_perturbation": "Figure S12. Initial perturbation-based sensitivity analysis retained as supplementary material.",
         "Sensitivity_01_delta_posterior_perturbation": "Figure S13. Posterior change under input perturbation scenarios, reported as supplementary sensitivity detail.",
@@ -957,7 +957,7 @@ def write_captions(
     supp_lines: List[str] = ["# Figure Captions (Supplementary)"]
 
     if fig_inventory.empty:
-        warnings.add("Figure inventory empty; figure captions generated as placeholders")
+        warnings.add("Figure inventory empty; captions were generated without figure files")
         main_lines.append(f"- {MANUAL_FLAG} No figures available")
         supp_lines.append(f"- {MANUAL_FLAG} No figures available")
     else:
@@ -1187,8 +1187,8 @@ def main() -> int:
         "Sensitivity source: results/07_sensitivity_results.json and summary CSVs.",
         "Environmental source: results/08_environmental_results.json and 08_emvp_summary_table.csv.",
     ]
-    skeleton_file = layout["drafts"] / "manuscript_skeleton.md"
-    write_manuscript_skeleton(
+    skeleton_file = layout["manuscript"] / "manuscript_outline.md"
+    write_manuscript_outline(
         skeleton_file,
         args.journal,
         workflow_notes,
