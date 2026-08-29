@@ -1,4 +1,4 @@
-# QMetal Adsorption onto Microplastics in Freshwaters: Bayesian Evidence for Weathering Effects and Limited Environmental Vector Potential
+# Metal Adsorption onto Microplastics in Freshwaters: Bayesian Evidence for Weathering Effects and Limited Environmental Vector Potential
 
 This repository contains the data, analysis scripts, model summaries, result tables, and publication figures supporting a quantitative hierarchical meta-analysis of Langmuir maximum adsorption capacity (`Qm`) for heavy metal adsorption onto microplastics.
 
