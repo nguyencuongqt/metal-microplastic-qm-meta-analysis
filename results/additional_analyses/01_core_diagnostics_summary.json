@@ -1,0 +1,45 @@
+{
+  "random_seed": 42,
+  "r2": [
+    {
+      "metric": "marginal_R2_fixed_effects",
+      "mean": 0.7730782190759833,
+      "median": 0.7795594889046524,
+      "hdi95_low": 0.6539922273711453,
+      "hdi95_high": 0.8745513675133203
+    },
+    {
+      "metric": "conditional_R2_full_model",
+      "mean": 0.9290361057442419,
+      "median": 0.9294053391422887,
+      "hdi95_low": 0.9165501208491315,
+      "hdi95_high": 0.9410907200587998
+    }
+  ],
+  "psis_loo": {
+    "elpd_loo": -319.4197655044351,
+    "p_loo": 62.323498419844384,
+    "se": 15.572359591286217,
+    "pareto_k_max": 0.9067069046344792,
+    "pareto_k_gt_0p7": 6,
+    "pareto_k_gt_1": 0,
+    "note": "High-k rows are paired with exact study-level LOSO refits as a conservative targeted sensitivity; exact observation-level reloo is not implemented."
+  },
+  "robustness": {
+    "prior_max_abs_delta_pooled_mean": 0.0057551734780272,
+    "prior_max_abs_delta_hdi_width": 0.0091521442862667,
+    "loso_delta_pooled_mean_min": -0.119140752668045,
+    "loso_delta_pooled_mean_max": 0.2769101851308697,
+    "loso_max_influence_score": 0.9908651366812036,
+    "loso_max_influence_study_id_numeric": 49,
+    "bootstrap_iterations": 30,
+    "bootstrap_pooled_mean_mean": 5.485188979479483,
+    "bootstrap_pooled_mean_p025": 4.832394646934315,
+    "bootstrap_pooled_mean_p975": 6.283165740152255
+  },
+  "package_versions": {
+    "arviz": "0.18.0",
+    "numpy": "1.26.4",
+    "pandas": "3.0.1"
+  }
+}

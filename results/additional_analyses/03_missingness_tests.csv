@@ -1,0 +1,15 @@
+missing,variable,test,p,cramers_v,dof,n_missing,n_observed,median_missing,median_observed
+pH_missing_flag,Metal_raw,chi_square,2.7453120276148173e-09,0.42119678062684496,8.0,,,,
+pH_missing_flag,ReT,chi_square,1.4957885060362309e-05,0.38836227006215335,14.0,,,,
+pH_missing_flag,AgS,chi_square,0.8993624993796929,0.007114308237883796,1.0,,,,
+pH_missing_flag,Study_ID,chi_square,1.0446136866496442e-40,1.0,49.0,,,,
+pH_missing_flag,log_Qm,mann_whitney,0.003332319011932771,,,138.0,178.0,6.452034151602893,5.278114659230517
+pH_missing_flag,Year,mann_whitney,5.78042696943591e-09,,,138.0,178.0,2022.0,2022.0
+pH_missing_flag,Temp,mann_whitney,0.6105514834166035,,,138.0,178.0,25.0,25.0
+SA_missing_flag,Metal_raw,chi_square,4.391644736697102e-11,0.4542595588985503,8.0,,,,
+SA_missing_flag,ReT,chi_square,7.830839515480905e-10,0.4778541629671336,14.0,,,,
+SA_missing_flag,AgS,chi_square,0.0032722663459415326,0.16544033589878201,1.0,,,,
+SA_missing_flag,Study_ID,chi_square,5.025271513956783e-39,0.9854771917388787,49.0,,,,
+SA_missing_flag,log_Qm,mann_whitney,0.0038854489794894137,,,191.0,125.0,5.278114659230517,6.177321513636175
+SA_missing_flag,Year,mann_whitney,0.007619435393811241,,,191.0,125.0,2022.0,2022.0
+SA_missing_flag,Temp,mann_whitney,0.11587946429525227,,,191.0,125.0,25.0,25.0
